@@ -49,7 +49,7 @@ html_simple <- function(
   lightbox = TRUE, thumbnails = TRUE, gallery = TRUE,
   fig_width = 6, fig_height = 6, fig_caption = TRUE,
   use_bookdown = TRUE, md_extensions = NULL,
-  mathjax = "UHHformats", pandoc_args = NULL, ... ) {
+  mathjax = "cgmindmodelos", pandoc_args = NULL, ... ) {
 
   html_template(
     template_name = "html_simple",
@@ -78,12 +78,12 @@ html_simple <- function(
 
 }
 
-##### This was also adjusted to link to the UHHformats file names:
+##### This was also adjusted to link to the cgmindmodelos file names:
 # html_simple css and js
 html_dependency_simple <- function() {
   htmltools::htmlDependency(name = "html_simple",
-    version = utils::packageVersion("UHHformats"),
-    src = system.file("templates/html_simple", package = "UHHformats"),
+    version = utils::packageVersion("cgmindmodelos"),
+    src = system.file("templates/html_simple", package = "cgmindmodelos"),
     script = "html_simple.js",
     stylesheet = "html_simple.css")
 }

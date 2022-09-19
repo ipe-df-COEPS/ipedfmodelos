@@ -9,12 +9,12 @@ find_resource <- function(template, file, type = "rmarkdown") {
   type <- match.arg(type, types)
   if (type == "rmarkdown") {
     res <- system.file(
-      "rmarkdown", "templates", template, "resources", file, package = "UHHformats"
+      "rmarkdown", "templates", template, "resources", file, package = "cgmindmodelos"
     )
   }
   if (type == "quarto") {
     res <- system.file(
-      "quarto", "templates", template, "resources", file, package = "UHHformats"
+      "quarto", "templates", template, "resources", file, package = "cgmindmodelos"
     )
   }
   if (res == "") stop(

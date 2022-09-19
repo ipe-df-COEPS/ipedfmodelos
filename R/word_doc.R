@@ -2,7 +2,7 @@
 #'
 #' This function serves as wrapper for \code{\link[bookdown]{word_document2}}, with a
 #' custom Pandoc Word template and different knitr default values (e.g., \code{number_sections = FALSE}).
-#' The Word template is based on the standard template of the University of Hamburg.
+#' The Word template is based on the standard template of the CGMIND.
 #'
 #' @param toc logical; \code{TRUE} to include a table of contents in the output.
 #' @param toc_depth integer; Depth of headers to include in table of contents. Default set to 4.
@@ -15,7 +15,7 @@
 #'        "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", and "haddock".
 #'        Pass \code{NULL} to prevent syntax highlighting.
 #' @param reference_docx character; use the specified file as a style reference in producing a docx file.
-#'        The 'uhh-template.docx' template implements most of the standard requirement at the UHH biology
+#'        The 'cgmind-template.docx' template implements most of the standard requirement at the UHH biology
 #'        department. If you prefer another template, pass the file name to this argument or simply use
 #'        'default' to use your standard Word template.
 #' @param font character; default font in the template file is "Helvetica"; for members of the UHH there is also
@@ -43,15 +43,15 @@
 #'  output: UHHthesis::word_doc
 #' }
 word_doc <- function(toc = FALSE, toc_depth = 4, number_sections = FALSE,
-  highlight = "default", reference_docx = "uhh-template", font = "Helvetica",
+  highlight = "default", reference_docx = "cgmind-template", font = "Helvetica",
   language = "en", dpi = 144, pandoc_args = NULL, ...) {
 
   # Font setting
   if (!font %in% c("Helvetica", "TheSansUHH", "other")) {
     stop('Set the font option to "Helvetica", "TheSansUHH" or "other".')
   }
-  if (font == "Helvetica") filename = "uhh-template-helvetica.docx"
-  if (font == "TheSansUHH") filename = "uhh-template-thesansuhh.docx"
+  if (font == "Helvetica") filename = "cgmind-template-helvetica.docx"
+  if (font == "TheSansUHH") filename = "cgmind-template-cgmindmodelos.docx"
 
   # Language setting
   if (!language %in% c("en", "de")) {
@@ -66,7 +66,7 @@ word_doc <- function(toc = FALSE, toc_depth = 4, number_sections = FALSE,
     }
   }
 
-  if (reference_docx == "uhh-template") {
+  if (reference_docx == "cgmind-template") {
     base <- rmd_word_document_format(
       format         = "word_doc",
       filename       = filename,

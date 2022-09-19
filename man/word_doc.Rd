@@ -9,7 +9,7 @@ word_doc(
   toc_depth = 4,
   number_sections = FALSE,
   highlight = "default",
-  reference_docx = "uhh-template",
+  reference_docx = "cgmind-template",
   font = "Helvetica",
   language = "en",
   dpi = 144,
@@ -33,7 +33,7 @@ headers in this case.}
 Pass \code{NULL} to prevent syntax highlighting.}
 
 \item{reference_docx}{character; use the specified file as a style reference in producing a docx file.
-The 'uhh-template.docx' template implements most of the standard requirement at the UHH biology
+The 'cgmind-template.docx' template implements most of the standard requirement at the UHH biology
 department. If you prefer another template, pass the file name to this argument or simply use
 'default' to use your standard Word template.}
 
@@ -59,7 +59,7 @@ A modified \code{\link[rmarkdown]{word_document}} based on a UHH Word template.
 \description{
 This function serves as wrapper for \code{\link[bookdown]{word_document2}}, with a
 custom Pandoc Word template and different knitr default values (e.g., \code{number_sections = FALSE}).
-The Word template is based on the standard template of the University of Hamburg.
+The Word template is based on the standard template of the CGMIND.
 }
 \examples{
 \dontrun{
