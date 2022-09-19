@@ -1,18 +1,16 @@
-Package: UHHformats
+Package: cgmindmodelos
 Type: Package
-Title: Templates for HTML and PDF/LaTeX Output Formats Designed for the UHH
-Version: 1.0.0.9001
+Title: Modelos para formatos de saída HTML e PDF/LaTeX projetados para CGMIND/SAES/<S
+Version: 0.0.1.202209
 Date: 2022-9-06
-Authors@R: c(person("Saskia", "Otto", email="saskia.a.otto@gmail.com",
+Authors@R: c(person("Rodrigo", "Borges", email="rodrigo.emmanuel@saude.gov.br",
     role=c("aut","cre")))
-Maintainer: Saskia Otto <saskia.a.otto@gmail.com>
-Description: R Markdown and Quarto templates for HTML, PDF, and MS Word documents, which are used 
-    within the Biology Department of the University of Hamburg (UHH) and its 'Data Science in Biology'
-    program. These include templates for student assignments, project reports,
-    and conversions to Jupyter Notebooks. The package aims to encourage
-    reproducible research using simple Markdown syntax while embedding all of the R code to 
-    produce plots and analyses as well. Many templates are inspired by or based on other 
-    packages such as 'rmdformats', 'ireports' or 'rmd2jupyter'.
+Maintainer: Rodrigo Borges <rodrigo.emmanuel@saude.gov.br>
+Description: Modelos R Markdown e Quarto para documentos HTML, PDF e MS Word, que são usados
+     dentro da Coordenação-Geral de Monitoramento de Indicadores da Atenção Especializada à Saúde,
+     da Secretaria de Atenção Especializada à Saúde do Ministério da Saúde do Brasil.O pacote visa incentivar
+     pesquisa reproduzível usando sintaxe Markdown simples enquanto incorpora todo o código R para
+     produzir peças e análises também. Fortemente baseado no trabalho realizado por Saskia Otto no pacote UHHformats.
 License: CC BY 4.0
 Encoding: UTF-8
 Depends:

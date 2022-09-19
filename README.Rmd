@@ -1,4 +1,5 @@
----
+.
+48569.+
 output: github_document
 ---
 
@@ -6,55 +7,51 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md é gerado a partir de README.Rmd. Edite esse arquivo -->
 
-# UHHformats <img src="vignettes/images/UHHformats_logo.png" align="right" width="90" height="100" />
+# Formatos cgmind <img src="vignettes/images/cgmind_mv.png" align="right" width="90" height="100" />
 
-<!-- [![R-CMD-check](https://github.com/saskiaotto/UHHformats/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/saskiaotto/UHHformats/actions/workflows/check-standard.yaml) -->
-
-
-This R package provides ready-to-use R Markdown and **now also Quarto templates** for HTML, PDF and Microsoft Word output formats, which are used within the Biology Department of the University of Hamburg (UHH) and its *Data Science in Biology* program. The package aims to encourage reproducible research using simple Markdown syntax while embedding all of the R code to produce plots and analyses as well. Included in the package are templates for 
-
-- student assignments
-    - [R Markdown: Simple PDF document in English (default) or German - `pdf_simple`]
-    - [Quarto: Output format for a simple PDF document in English (default) or German - `pdf_simple`]
-- project HTML files
-    - [R Markdown: HTML document (simple design) - `html_simple`]
-    - [R Markdown: HTML document (with bootstrap design 'Material') - `html_material`]
-    - [Quarto: Simple HTML output format - `html`]
-- PDF reports
-    - [R Markdown: UHH report in in English (default) or German - `pdf_report`]
-    - [Quarto: Output format for a PDF report in English (default) or German - `pdf_report`]
-- cheat sheets
-    - [R Markdown: Output format for a simple cheat sheet (PDF) - `pdf_cheatsheet`]
-- MS Word documents
-    - [R Markdown: Simple Microsoft Word document - `word_doc`]
-    - [Quarto: Simple Microsoft Word output format - `word`]
-- conversions from R Markdown documents to Jupyter Notebooks
-    - [R Markdown: Jupyter Notebook output format - `rmd_to_jupyter`]
-
-The default font for all templates is 'Helvetica' but the font can be replaced with the University's own font style 'TheSans UHH' in the PDF and Word templates. If you are associated to the UHH you are allowed to use this font. Most templates include further the UHH logo and have adopted the UHH corporate design, but the logo can easily be replaced in the YAML header and also the style can be modified, by e.g. adding your own CSS stylesheet in the YAML header of the HTML template. Hence, these templates are not limited to UHH students and employees. 
-
-Many templates were developed based on other inspiring templates and R packages, which are mentioned below. **To help getting started, all templates contain already some example text and code** for formatting text, writing equations, creating tables and figures with cross-references and including references.
-
-**NEW in this version**: 
-
-- The templates for the Bachelor and Master thesis have been moved into a separate R package named *UHHthesis* (see https://github.com/saskiaotto/UHHthesis/). 
-- Small design makeover of various templates.
-- A new Word template for R Markdown was added.
-- This package also contains now templates for Quarto documents that generate HTML, PDF, and MS Word output (see [Quarto template gallery]). [Quarto](https://quarto.org) is a next generation version of R Markdown from RStudio, which supports more languages and environments such as Python, Julia, or Jupyter. Like R Markdown, Quarto uses Knitr to execute R code, and is therefore able to render most existing Rmd files without modification. 
+<!-- [![R-CMD-check](https://github.com/saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/ saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml) -->
 
 
-## Installation
+Este pacote R fornece R Markdown e **modelos Quarto** prontos para uso para formatos de saída HTML, PDF e Microsoft Word, que são usados ​​na Coordenação-Geral de Monitoramento de Indicadores da Secretaria de Atenção Especializada do Ministério da Saúde. O pacote visa incentivar a pesquisa reprodutível usando a sintaxe simples do Markdown enquanto incorpora todo o código R para produzir gráficos, tabelas e análises também. Incluídos no pacote estão modelos para
 
-Install the development version from GitHub using the *remotes* package:
+- esboços/análises preliminares internas
+    - [R Markdown: documento PDF simples em português (padrão) ou inglês - `pdf_simple`]
+    - [Quarto: Formato de saída para um documento PDF simples em português (padrão) ou inglês - `pdf_simple`]
+- arquivos HTML do projeto
+    - [R Markdown: documento HTML (design simples) - `html_simple`]
+    - [R Markdown: documento HTML (com design de bootstrap 'Material') - `html_material`]
+    - [Quarto: formato de saída HTML simples - `html`]
+- Relatórios em PDF
+    - [R Markdown: relatório CGMIND em português (padrão) ou inglês - `pdf_report`]
+    - [Quarto: Formato de saída para um relatório PDF em português (padrão) ou inglês - `pdf_report`]
+- folhas de dicas
+    - [R Markdown: Formato de saída para uma folha de dicas simples (PDF) - `pdf_cheatsheet`]
+- Documentos MS Word
+    - [R Markdown: documento simples do Microsoft Word - `word_doc`]
+    - [Quarto: formato de saída simples do Microsoft Word - `word`]
+- conversões de documentos R Markdown para Jupyter Notebooks
+    - [R Markdown: formato de saída do Jupyter Notebook - `rmd_to_jupyter`]
+
+A fonte padrão para todos os modelos é 'Helvetica', mas a fonte pode ser substituída pelo estilo de fonte 'Latto' nos modelos PDF e Word.A maioria dos modelos inclui ainda a identidade visual da CGMIND e adotou seu design, mas pode ser facilmente substituído no cabeçalho YAML e também o estilo pode ser modificado, por exemplo, adicionando sua própria folha de estilo CSS no cabeçalho YAML do modelo HTML. Portanto, esses modelos não se limitam a funcionários da CGMIND.
+
+Os templates foram desenvolvidos de uma adaptação livre daqueles existentes no pacote UHHformats. **Para ajudar a começar, todos os modelos já contêm alguns exemplos de texto e código** para formatar texto, escrever equações, criar tabelas e figuras com referências cruzadas e incluir referências.
+
+**NOVO nesta versão**:
+
+- Primeira adaptação livre - primeira versão de do format word e word_doc
+
+## Instalação
+
+Instale a versão de desenvolvimento do GitHub usando o pacote *remotes*:
 
 ```{r, eval = FALSE}
 if (!require("remotes")) install.packages("remotes")
-remotes::install_github("saskiaotto/uhhformats", build_vignettes = TRUE)
+remotes::install_github("rodrigoesborges/cgmindmodelos", build_vignettes = TRUE)
 ```
 
-Make sure that you also have the latest versions of the R packages *rmarkdown* and *knitr* installed. For some R Markdown templates you also need the R package *bookdown*. 
+Certifique-se de que você também tenha as versões mais recentes dos pacotes R *rmarkdown* e *knitr* instaladas. Para alguns modelos R Markdown, você também precisa do pacote R *bookdown*.
 
 ```{r, eval = FALSE}
 if (!require("rmarkdown")) install.packages("rmarkdown")
@@ -62,177 +59,176 @@ if (!require("knitr")) install.packages("knitr")
 if (!require("bookdown")) install.packages("bookdown")
 ```
 
-If you are more interested in the Quarto templates make sure that you have the Quarto CLI on your machine installed: [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/). To render the .qmd documents directly from the console you need to have the Quarto R package installed:
+Se você estiver mais interessado nos templates Quarto certifique-se de ter o Quarto CLI instalado em sua máquina: [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/). Para renderizar os documentos .qmd diretamente do console você precisa ter o pacote Quarto R instalado:
 
 ```{r, eval = FALSE}
 if (!require("quarto")) install.packages("quarto")
 ```
 
 
+## Começando
 
-## Getting started
+### R Documentos de Markdown
 
-### R Markdown documents
+#### Criando um novo documento e renderizando-o no R Studio
 
-#### Creating a new document and rendering it within R Studio
+Depois de instalar o pacote, talvez seja necessário fechar e reabrir o  ​​RStudio para ver os `cgmindmodelos`
+modelos listados.
 
-Once you installed the package you might need to close and re-open R Studio to see the `UHHformats` 
-templates listed.
-
-1. Choose **File** > **New File** > **R Markdown**, then select **From Template**.
-You should then be able to create a new document from one of the package templates:
+1. Escolha **Arquivo** > **Novo arquivo** > **R Markdown** e selecione **Do modelo**.
+Você deve ser capaz de criar um novo documento a partir de um dos modelos de pacote:
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="demo create document"}
 knitr::include_graphics("vignettes/images/img_create_document.png")
 ```
 
-2. Choose the directory in which you want to save your file and provide a file name (that name will be used for both the .Rmd file and the new folder in which the .Rmd file will be placed). 
+2. Escolha o diretório no qual deseja salvar seu arquivo e forneça um nome de arquivo (esse nome será usado tanto para o arquivo .Rmd quanto para a nova pasta na qual o arquivo .Rmd será colocado).
 
-3. If you are interested in the documentation already provided in the template file for getting started, render the document once before you start changing the content (click the `Knit` button).
+3. Se você estiver interessado na documentação já fornecida no arquivo de modelo para começar, renderize o documento uma vez antes de começar a alterar o conteúdo (clique no botão `Knit`).
 
 
-#### Without R Studio
+#### Sem RStudio
 
-You can create a new directory inside your current directory, including the ready-to-use R Markdown file and all associated files (e.g. images, fonts, LaTeX templates, etc.), with the built-in function `create_rmd_doc()`, which is adopted from the [rmdformats](https://github.com/juba/rmdformats) package.
+Você pode criar um novo diretório dentro do seu diretório atual, incluindo o arquivo R Markdown pronto para uso e todos os arquivos associados (por exemplo, imagens, fontes, modelos LaTeX, etc.), com a função interna `create_rmd_doc()`, que é adotado do pacote [rmdformats](https://github.com/juba/rmdformats).
 
-Use, for instance,
-
-```{r, eval=FALSE}
-UHHformats::create_rmd_doc(dirname = "new_doc", template = "pdf_report")
-```
-to generate a report-like PDF output.
-
-Alternatively, use 
+Utilize, por exemplo,
 
 ```{r, eval=FALSE}
-rmarkdown::draft("new_doc.Rmd", template = "html_simple", package = "UHHformats")
+cgmindmodelos::create_rmd_doc(dirname = "new_doc", template = "pdf_report")
+```
+para gerar uma saída PDF semelhante a um relatório.
+
+Alternativamente, use
+
+```{r, eval=FALSE}
+rmarkdown::draft("new_doc.Rmd", template = "html_simple", package = "cgmindmodelos")
 ```
 
-These functions will automatically create the subdirectory and place the generated .Rmd file and all associated files and folders into it.
+Essas funções criarão automaticamente o subdiretório e colocarão o arquivo .Rmd gerado e todos os arquivos e pastas associados nele.
 
-You can render your document into the HTML, PDF or Word output format using the `render()` function from the `rmarkdown` package :
+Você pode renderizar seu documento no formato de saída HTML, PDF ou Word usando a função `render()` do pacote `rmarkdown`:
 
 ```{r, eval=FALSE}
 setwd("./new-doc")
 rmarkdown::render("new-doc.Rmd")
 ```
 
-**Important note**: `rmarkdown::render` uses as default Pandoc to convert the Markdown document into HTML or PDF. While R Studio uses its internal Pandoc installation (e.g., on a Mac located in '/Applications/R Studio.app/Contents/MacOS/pandoc/'), you need to have Pandoc and its citation parser also installed on your system. See https://pandoc.org/installing.html for instructions. This book chapter is also helpful: https://bookdown.org/yihui/rmarkdown-cookbook/install-pandoc.html
+**Nota importante**: `rmarkdown::render` usa como padrão o Pandoc para converter o documento Markdown em HTML ou PDF. Enquanto o R Studio usa sua instalação interna do Pandoc, caso trabalhe sem RStudio deverá ter o Pandoc e seu analisador de citações também instalado em seu sistema. Consulte https://pandoc.org/installing.html para obter instruções. Este capítulo de livro também é útil: https://bookdown.org/yihui/rmarkdown-cookbook/install-pandoc.html
 
 
-### Quarto documents 
+### Documentos Quarto
 
-Quarto templates are currently not supported in RStudios IDE. Until that changes, you can access these templates with the `create_quarto_doc()` function. The function has three arguments: `dirname` for the name of the subdirectory (and .qmd file), `template` for the output types (choose from 'html', 'pdf_simple', 'pdf_report' or 'word') and `font` for the font type. If the output format is PDF or Word you can choose between the 'Helvetica' and 'TheSansUHH' font. The function will copy the .qmd files and associated files and folders into this new subdirectory
+No momento, os modelos Quarto não são suportados na IDE RStudio . Até que isso mude, você pode acessar esses templates com a função `create_quarto_doc()`. A função tem três argumentos: `dirname` para o nome do subdiretório (e arquivo .qmd), `template` para os tipos de saída (escolha entre 'html', 'pdf_simple', 'pdf_report' ou 'word') e ` font` para o tipo de fonte. Se o formato de saída for PDF ou Word, você pode escolher entre a fonte 'Helvetica' e 'TheSansCGMIND'. A função irá copiar os arquivos .qmd e os arquivos e pastas associados para este novo subdiretório
 
-Use, for instance,
+Utilize, por exemplo,
 
 ```{r, eval=FALSE}
-UHHformats::create_qmd_doc(dirname = "my_html_doc", template = "html")
-UHHformats::create_qmd_doc(dirname = "my_pdf_doc", template = "pdf_simple", font = "TheSansUHH")
+cgmindmodelos::create_qmd_doc(dirname = "my_html_doc", template = "html")
+cgmindmodelos::create_qmd_doc(dirname = "my_pdf_doc", template = "pdf_simple", font = "TheSansCGMIND")
 ```
 
-to generate a HTML page with the browsers default font or a simple PDF document with the University's own font.
+gerar uma página HTML com a fonte padrão do navegador ou um documento PDF simples com a fonte da própria Universidade.
 
-If you are using RStudio, go in the files manager to your new subdirectory, open the .qmd file and click on the **Render** button. For HTML output, you can use alternatively the  `quarto_render()` function from the *quarto* package:
+Se você estiver usando o RStudio, vá no gerenciador de arquivos para o seu novo subdiretório, abra o arquivo .qmd e clique no botão **Render**. Para saída HTML, você pode usar alternativamente a função `quarto_render()` do pacote *quarto*:
 
 ```{r, eval=FALSE}
 setwd("./my_html_doc")
-quarto::quarto_render("my_html_doc.qmd",  output_format = "html")
+quarto::quarto_render("my_html_doc.qmd", output_format = "html")
 ```
 
 
-### Further requirements - LaTeX
+### Requisitos adicionais - LaTeX
 
-In addition to Pandoc or R Studio being installed, you need to have [LaTeX](https://www.latex-project.org/about/) installed if you want to use the templates that convert R Markdown to PDF output formats. Depending on your operating systems there are different distributions you can use, e.g. for Mac there is [MacTeX](http://www.tug.org/mactex/), which includes [TeXShop](https://pages.uoregon.edu/koch/texshop/), a nice Mac-only editor for .tex documents. For other OS see here: https://www.latex-project.org/get/
+Além do Pandoc ou R Studio ser instalado, você precisa ter o [LaTeX](https://www.latex-project.org/about/) instalado se quiser usar os modelos que convertem R Markdown para formatos de saída PDF. Dependendo de seus sistemas operacionais, existem diferentes distribuições que você pode usar, por exemplo, veja aqui: https://www.latex-project.org/get/
 
-An easy way to install LaTeX on any platform is with the [tinytex](https://yihui.org/tinytex/) R package:
+Uma maneira fácil de instalar o LaTeX em qualquer plataforma é com o pacote [tinytex](https://yihui.org/tinytex/) R:
 
 ```{r, eval=FALSE}
 install.packages('tinytex')
 tinytex::install_tinytex()
-# After restarting R Studio, confirm that you have LaTeX with 
-tinytex:::is_tinytex() 
+# Após reiniciar o R ​​Studio, confirme se você possui LaTeX com
+tinytex:::is_tinytex()
 ```
 
-TinyTeX is a custom LaTeX distribution based on TeX Live that is small in size but that includes most relevant functions (for R users). You may, however, still need to install a few extra LaTeX packages on your first attempt to knit when you use this package.
+TinyTeX é uma distribuição LaTeX personalizada baseada no TeX Live que é pequena em tamanho, mas que inclui as funções mais relevantes (para usuários de R). Você pode, no entanto, ainda precisar instalar alguns pacotes LaTeX extras em sua primeira tentativa de tricotar ao usar este pacote.
 
-Although LaTeX is a powerful and popular tool in Academia, it can take a while to learn the syntax and to find the correct formatting. R Markdown and the PDF template in this packages offer a much simpler syntax and the direct embedding of figures and tables, but at the cost of loosing some of the expressiveness of LaTeX. However, you can insert LaTeX code directly into the R Markdown files and also add LaTeX packages and format styles in the YAML header.
+Embora o LaTeX seja uma ferramenta poderosa e popular na Academia, pode demorar um pouco para aprender a sintaxe e encontrar a formatação correta. R Markdown e o modelo PDF nestes pacotes oferecem uma sintaxe muito mais simples e a incorporação direta de figuras e tabelas, mas ao custo de perder um pouco da expressividade do LaTeX. No entanto, você pode inserir o código LaTeX diretamente nos arquivos R Markdown e também adicionar pacotes LaTeX e estilos de formato no cabeçalho YAML.
 
-If you want to know more about LaTeX, a good start is the *overleaf* tutorial (and its entire documentation):
+Se você quiser saber mais sobre o LaTeX, um bom começo é o tutorial *overleaf* (e toda a sua documentação):
 https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
 
 
 ---
 
-## R Markdown template gallery
+## Galeria de modelos de Markdown R
 
-### R Markdown: HTML document (simple design) - `html_simple`
+### R Markdown: documento HTML (design simples) - `html_simple`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_rmd_html_simple.html).
+→ para um arquivo de exemplo veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_html_simple.html).
 
-This template converts the R Markdown file into a simple HTML file with a fixed table of content in the upper right corner and a code folding button similar to R notebooks, which is useful in student assignments.
+Este modelo converte o arquivo R Markdown em um arquivo HTML simples com uma tabela de conteúdo fixa no canto superior direito e um botão de dobra de código semelhante aos blocos de anotações R, o que é útil nas tarefas dos alunos.
 
-Its function calls internally `rmarkdown::html_document` or `bookdown::html_document2`. The latter is the default, hence, numbered section (set to `FALSE` as default) and automatic numbering of figures and tables is supported. However, please note that the hyperlink in the cross-reference does not yet work in this template. The basis for this function and the HTML, CSS, and JavaScript code is the `html_clean` template developed by Julien Barnier in the [rmdformats](https://github.com/juba/rmdformats) package.
+Sua função chama internamente `rmarkdown::html_document` ou `bookdown::html_document2`. Este último é o padrão, portanto, a seção numerada (definida como `FALSE` como padrão) e a numeração automática de figuras e tabelas é suportada. No entanto, observe que o hiperlink na referência cruzada ainda não funciona neste modelo. A base para esta função e o código HTML, CSS e JavaScript é o template `html_clean` desenvolvido por Julien Barnier no pacote [rmdformats](https://github.com/juba/rmdformats).
 
-The current R Markdown template has in the YAML header:
+O modelo R Markdown atual tem no cabeçalho YAML:
 
 ```
 ---
-title: "Title"
-author: "Name"
-date: "`r Sys.Date()`"
-output:
-  UHHformats::html_simple:
-    highlight: kate
-    code_folding: show
+título: "Título"
+nome do autor"
+data: "`r Sys.Date()`"
+resultado:
+  Formatos CGMIND::html_simple:
+    destaque: kate
+    code_folding: mostrar
     use_bookdown: true
     number_sections: false
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 ```
 
-To get an overview of options that can be set in the YAML header besides `highlight`, `code_folding`, and `number_sections` see the help file for `html_simple` as well `bookdown::html_document2` or `rmarkdown::html_document`.
+Para obter uma visão geral das opções que podem ser definidas no cabeçalho YAML além de `highlight`, `code_folding` e `number_sections` veja o arquivo de ajuda para `html_simple` bem como `bookdown::html_document2` ou `rmarkdown::html_document` .
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo html_simple template"}
 knitr::include_graphics("vignettes/images/img_rmd_html_simple.png")
 ```
 
 
-### R Markdown: HTML document (with bootstrap design 'Material') - `html_material`
+### R Markdown: documento HTML (com design de bootstrap 'Material') - `html_material`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_rmd_html_material.html).
+→ para um arquivo de exemplo veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_html_material.html).
 
-This template converts the R Markdown file into an HTML output file that has a navigation bar on the left and in which the different sections (defined by setting header level 1 (#)) are displayed on individual pages or cards. If you want all sections on a single page, add the `cards: false` option in the YAML header. The design is an adaptation from the Material design theme for Bootstrap 3 project: https://github.com/FezVrasta/bootstrap-material-design. Also in this template, the HTML, JavaScript, CSS, and R code were originally developed by Julien Barnier in the [rmdformats](https://github.com/juba/rmdformats) package and only slightly modified here to tailor it to the *Data Science in Biology* program at the UHH.
+Este modelo converte o arquivo R Markdown em um arquivo de saída HTML que possui uma barra de navegação à esquerda e na qual as diferentes seções (definidas pela configuração do nível de cabeçalho 1 (#)) são exibidas em páginas ou cartões individuais. Se você quiser todas as seções em uma única página, adicione a opção `cards: false` no cabeçalho YAML. O design é uma adaptação do tema Material design para o projeto Bootstrap 3: https://github.com/FezVrasta/bootstrap-material-design. Também neste modelo, o código HTML, JavaScript, CSS e R foram originalmente desenvolvidos por Julien Barnier no pacote [rmdformats](https://github.com/juba/rmdformats) e apenas ligeiramente modificados aqui para adaptá-lo ao *Programa de Ciência de Dados em Biologia* do CGMIND.
 
-Similar to `html_simple`, the underlying function calls internally `rmarkdown::html_document` or (default) `bookdown::html_document2`. But here, the numbered section is set to `TRUE` as default and also the hyperlink in the cross-references works. To get an overview of options that can be set in the YAML header besides `highlight` and `code_folding`, which are shown as examples in the R Markdown template, see the help file for `html_material` as well `bookdown::html_document2` or `rmarkdown::html_document`.
+Semelhante a `html_simple`, a função subjacente chama internamente `rmarkdown::html_document` ou (padrão) `bookdown::html_document2`. Mas aqui, a seção numerada é definida como `TRUE` como padrão e também o hiperlink nas referências cruzadas funciona. Para obter uma visão geral das opções que podem ser definidas no cabeçalho YAML além de `highlight` e `code_folding`, que são mostrados como exemplos no modelo R Markdown, consulte o arquivo de ajuda para `html_material` bem como `bookdown::html_document2` ou `rmarkdown::html_document`.
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo html_material template"}
 knitr::include_graphics("vignettes/images/img_rmd_html_material.png")
 ```
 
 
-#### Addtional features available in these HTML templates:
+#### Recursos adicionais disponíveis nestes modelos HTML:
 
-Some extra features were adopted from the [rmdformats](https://github.com/juba/rmdformats) 
-package, i.e. 
+Alguns recursos extras foram adotados do [rmdformats](https://github.com/juba/rmdformats)
+pacote, ou seja
 
-- tabsets are supported like in the default template made with `rmarkdown::html_document()`
-- both templates provide automatic thumbnails for figures with lightbox display
+- os conjuntos de guias são suportados como no modelo padrão feito com `rmarkdown::html_document()`
+- ambos os modelos fornecem miniaturas automáticas para figuras com exibição em lightbox
 
 
 
-### R Markdown: Simple Microsoft Word document - `word_doc`
+### R Markdown: Documento simples do Microsoft Word - `word_doc`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_rmd_word_doc.docx).
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_word_doc.docx).
 
-This template converts the R Markdown file into a Microsoft Word document, which is suitable for student assignments or project reports. The underlying function `word_doc` is a wrapper of `bookdown::word_document2`. By using internally *bookdown* the language settings for figure legends and table captions can be automatically changed from English to German (or any other language).
+Este modelo converte o arquivo R Markdown em um documento do Microsoft Word, adequado para tarefas de alunos ou relatórios de projetos. A função subjacente `word_doc` é um wrapper de `bookdown::word_document2`. Usando internamente o *bookdown*, as configurações de idioma para legendas de figuras e legendas de tabelas podem ser alteradas automaticamente de inglês para alemão (ou qualquer outro idioma).
 
-In the YAML header of the R Markdown template, you can easily customize the language, font, the bibliography style or whether to include a table of content and the title of it. By default `word_doc` uses a 'uhh-template' template file, which is based on the [standard template file](https://www.kus.uni-hamburg.de/themen/oeffentlichkeitsarbeit/corporate-design/vorlagen.html) of the University of Hamburg (UHH) except for the font type, which is set to 'Helvetica'. If you are associated to the UHH you can also use the University's own font "TheSansUHH". In that case replace *font = "Helvetica"* with *font = "TheSansUHH"*. 
+No cabeçalho YAML do modelo R Markdown, você pode personalizar facilmente o idioma, a fonte, o estilo de bibliografia ou incluir um índice e o título do mesmo. Por padrão, o `word_doc` usa um arquivo de modelo 'CGMIND-template', que é baseado no [arquivo de modelo padrão](https://www.kus.uni-hamburg.de/themen/oeffentlichkeitsarbeit/corporate-design/vorlagen. html) da Universidade de Hamburgo (CGMIND), exceto pelo tipo de fonte, que é definido como 'Helvetica'. Se você estiver associado à CGMIND, também poderá usar a fonte própria da Universidade "TheSansCGMIND". Nesse caso, substitua *font = "Helvetica"* por *font = "TheSansCGMIND"*.
 
-If you feel like using your own template or the standard Word template (i.e. the Normal.dot file) simply provide the path to your file or write "default" for the latter case (*reference_docx: "default"*). You can also use another font by using the setting *font = "other"* and replacing the 'font_XXX.ttf' files in the working directory with your own files. Please note, that you have to name these files exactly as the template font files.
+Se você quiser usar seu próprio modelo ou o modelo padrão do Word (ou seja, o arquivo Normal.dot), simplesmente forneça o caminho para seu arquivo ou escreva "default" para o último caso (*reference_docx: "default"*). Você também pode usar outra fonte usando a configuração *font = "other"* e substituindo o 'font_XXX.ttf' no diretório de trabalho com seus próprios arquivos. Observe que você deve nomear esses arquivos exatamente como os arquivos de fonte do modelo.
 
-If you set the language to German, a configuration file named '_bookdown.yml' is copied into the working directory, which defines the labels of the figure legend and table captions. If you want to use other labels (e.g. 'Abb.' instead of 'Abbildung') feel free to modify the file.
+Se você definir o idioma para alemão, um arquivo de configuração chamado '_bookdown.yml' será copiado para o diretório de trabalho, que define os rótulos da legenda da figura e das legendas da tabela. Se você quiser usar outros rótulos (por exemplo, 'Abb.' em vez de 'Abbildung'), sinta-se à vontade para modificar o arquivo.
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo word_doc template"}
 knitr::include_graphics("vignettes/images/img_rmd_word_doc.png")
@@ -240,13 +236,13 @@ knitr::include_graphics("vignettes/images/img_rmd_word_doc.png")
 
 
 
-### R Markdown: Simple PDF document in English (default) or German - `pdf_simple`
+### R Markdown: Documento PDF simples em português (padrão) ou inglês - `pdf_simple`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_rmd_pdf_simple.pdf).
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_simple.pdf).
 
-This template converts the R Markdown file into a simple PDF/LaTeX - based document structured as an article, which is suitable for student assignments. The underlying function `pdf_simple` is a wrapper of `rmarkdown::pdf_document`. Similar to the `pdf_report` template, the YAML header offers various options to adjust the layout of the document.
+Este modelo converte o arquivo R Markdown em um documento simples baseado em PDF/LaTeX estruturado como um artigo, que é adequado para tarefas de alunos. A função subjacente `pdf_simple` é um wrapper de `rmarkdown::pdf_document`. Semelhante ao modelo `pdf_report`, o cabeçalho YAML oferece várias opções para ajustar o layout do documento.
 
-In the YAML header of the R Markdown template, you can easily customize the logos and cover image, the language, the bibliography style or even add your own LaTeX style with the `include-after` option:
+No cabeçalho YAML do modelo R Markdown, você pode personalizar facilmente os logotipos e a imagem da capa, o idioma, o estilo da bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção `include-after`:
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo pdf_simple template"}
 knitr::include_graphics("vignettes/images/img_rmd_pdf_simple.png")
@@ -254,50 +250,50 @@ knitr::include_graphics("vignettes/images/img_rmd_pdf_simple.png")
 
 
 
-### R Markdown: UHH report in in English (default) or German - `pdf_report`
+### R Markdown: relatório CGMIND em português (padrão) ou inglês - `pdf_report`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_rmd_pdf_report.pdf).
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_report.pdf).
 
-This template converts the R Markdown file into a PDF/LaTeX - based report suitable for project reports and student assignments. The underlying function `pdf_report` is a wrapper of `rmarkdown::pdf_document` and based on the [rticles](https://github.com/rstudio/rticles) package that
-provides templates for various journal articles. The Pandoc LaTeX template and the report layout are inspired by INWTlab's [ireports](https://github.com/INWTlab/ireports) package.
+Este modelo converte o arquivo R Markdown em um relatório baseado em PDF/LaTeX adequado para relatórios de projetos e tarefas de alunos. A função subjacente `pdf_report` é um wrapper de `rmarkdown::pdf_document` e baseado no pacote [rticles](https://github.com/rstudio/rticles) que
+fornece modelos para vários artigos de periódicos. O modelo Pandoc LaTeX e o layout do relatório são inspirados no pacote [ireports](https://github.com/INWTlab/ireports) do INWTlab.
 
-In the YAML header of the R Markdown template, you can easily customize the logos and cover image, the language, the bibliography style or even add your own LaTeX style with the `include-after` option:
+No cabeçalho YAML do modelo R Markdown, você pode personalizar facilmente os logotipos e a imagem da capa, o idioma, o estilo da bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção `include-after`:
 
 ```
 ---
-title: "Document title"
-author: "Author name(s)"
-date: \today
-fontsize: 11pt
-german: false
-bibliography: bibfile.bib       
-bibliographystyle: bibstyle.bst
-params:
-  cover: images/cover.png
-  title_logo_left: images/uhh_logo.png
+title: "Título do documento"
+autor: "Nome(s) do autor"
+data: \hoje
+tamanho da fonte: 11pt
+alemão: false
+bibliografia: bibfile.bib
+bibliografiastyle: bibstyle.bst
+parâmetros:
+  capa: imagens/capa.png
+  title_logo_left: images/CGMIND_logo.png
   title_logo_right: images/min_logo.png
-  logo_small: images/logo_icon.png
-output:
-  UHHformats::pdf_report:
+  logo_small: imagens/logo_icon.png
+resultado:
+  Formatos CGMIND::pdf_report:
     df_print: kable
 ---
 ```
 
-For more details on available arguments in `pdf_report` (in addition to `df_print` as shown here) see its help file as well as the  help for `rmarkdown::pdf_document`.
+Para mais detalhes sobre os argumentos disponíveis em `pdf_report` (além de `df_print` como mostrado aqui) veja seu arquivo de ajuda, bem como a ajuda para `rmarkdown::pdf_document`.
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo pdf_report template"}
 knitr::include_graphics("vignettes/images/img_rmd_pdf_report.png")
 ```
 
 
-### R Markdown: Output format for a simple cheat sheet (PDF) - `pdf_cheatsheet`
+### R Markdown: Formato de saída para uma folha de dicas simples (PDF) - `pdf_cheatsheet`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_rmd_pdf_cheatsheet.pdf).
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_cheatsheet.pdf).
 
-Template for creating a simple cheat sheet. The PDF output format will be A4 sized and horizontal. You can define whether the cheat sheet should have 2,3,4 or more columns. Also the text and box 
-colors and font size can be adjusted. The [LaTeX template by Sarah Lang](https://www.overleaf.com/latex/templates/colourful-cheatsheet-template/qdsshbjktndd) served here as inspiration for the layout and code.
+Modelo para criar uma folha de dicas simples. O formato de saída PDF será de tamanho A4 e horizontal. Você pode definir se a folha de dicas deve ter 2,3,4 ou mais colunas. Também o texto e a caixa
+cores e tamanho da fonte podem ser ajustados. O [modelo LaTeX de Sarah Lang](https://www.overleaf.com/latex/templates/colourful-cheatsheet-template/qdsshbjktndd) serviu aqui como inspiração para o layout e o código.
 
-The templates includes predefined LaTeX commands for textboxes. If you want to use them to make your cheat sheet visually more appealing, you have to continue coding in LaTeX unfortunately. I didn't manage yet to get around LaTeX overall. However, the template .Rmd file provides several examples regarding the layout and LaTeX  syntax, which is hopefully sufficient enough for the inexperienced coder.
+Os modelos incluem comandos LaTeX predefinidos para caixas de texto. Se você quiser usá-los para tornar sua folha de dicas visualmente mais atraente, você precisa continuar codificando em LaTeX, infelizmente. Eu ainda não consegui contornar o LaTeX em geral. No entanto, o arquivo de modelo .Rmd fornece vários exemplos sobre o layout e a sintaxe do LaTeX, o que esperamos que seja suficiente para o codificador inexperiente.
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo pdf_cheatsheet template"}
 knitr::include_graphics("vignettes/images/img_rmd_pdf_cheatsheet.png")
@@ -305,38 +301,38 @@ knitr::include_graphics("vignettes/images/img_rmd_pdf_cheatsheet.png")
 
 
 
-### R Markdown: Jupyter Notebook output format - `rmd_to_jupyter`
+### R Markdown: formato de saída do Jupyter Notebook - `rmd_to_jupyter`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_rmd_to_jupyter.ipynb).
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_to_jupyter.ipynb).
 
-While I'm a strong advocate of R Studio and R Studio server as IDE for R, there are times where [Juypter Notebook][https://jupyter.org/] is clearly the better option. Not only that Jupyter Notebooks allows running R directly in the browser without the installation of additional programs when using a remote Notebook server - this is in fact what R Studio Server is also for - but students can use it from any mobile device, including smartphones. This is particularly useful during lectures, when aiming to engage students more.
+Embora eu seja um forte defensor do R Studio e do servidor R Studio como IDE para R, há momentos em que [Juypter Notebook][https://jupyter.org/] é claramente a melhor opção. Não apenas o Jupyter Notebooks permite executar o R ​​diretamente no navegador sem a instalação de programas adicionais ao usar um servidor Notebook remoto - na verdade, é para isso que o R Studio Server também serve - mas os alunos podem usá-lo em qualquer dispositivo móvel, incluindo smartphones. Isto é particularmente útil durante as palestras, quando para envolver mais os alunos.
 
-So I was looking for simple approaches to convert my R Markdown files into Jupyter Notebooks. Although I found some packages such as [markdowntemplates](https://github.com/hrbrmstr/markdowntemplates) or [notedown](https://github.com/aaren/notedown) (which the former depends on) I ran into few issues:
+Então, eu estava procurando abordagens simples para converter meus arquivos R Markdown em Jupyter Notebooks. Embora eu tenha encontrado alguns pacotes como [markdowntemplates](https://github.com/hrbrmstr/markdowntemplates) ou [notedown](https://github.com/aaren/notedown) (dos quais o primeiro depende) eu encontrei algumas questões:
 
-- you have to have Python and notedown installed and correctly setup before you can start
-- when opening the notebooks in Jupyter Notebook locally or using a remote server, either no or the Phyton kernel was automatically started as all code chunks were read as Python code
-- when choosing the R kernel for the notebook, the `%%R` flag appeared in each code chunk and had to be removed manually
+- você precisa ter o Python e o notedown instalados e configurados corretamente antes de começar
+- ao abrir os notebooks no Jupyter Notebook localmente ou usando um servidor remoto, não ou o kernel Phyton foi iniciado automaticamente, pois todos os pedaços de código foram lidos como código Python
+- ao escolher o kernel R para o notebook, o sinalizador `%%R` aparecia em cada pedaço de código e precisava ser removido manualmente
 
-So eventually I found a simpler approach in the [rmd2jupyter](https://github.com/mkearney/rmd2jupyter) package developed my Michael Kearney and converted his function into an R Markdown template here. The underlying function is a custom knit function, which converts the R Markdown code directly into a prettified JSON string using
-`jsonlite::toJSON` and `jsonlite::prettify` and saves it then in an `.ipynb` file
+Então, eventualmente, encontrei uma abordagem mais simples no pacote [rmd2jupyter](https://github.com/mkearney/rmd2jupyter) desenvolvi meu Michael Kearney e converti sua função em um modelo R Markdown aqui. A função subjacente é uma função de malha personalizada, que converte o código R Markdown diretamente em uma string JSON embelezada usando
+`jsonlite::toJSON` e `jsonlite::prettify` e salva em um arquivo `.ipynb`
 
-The only thing you need in the YAML header is therefore:
+A única coisa que você precisa no cabeçalho YAML é, portanto:
 
 ```
 ---
-knit: UHHformats::rmd_to_jupyter
+tricotar: cgmindmodelos::rmd_to_jupyter
 ---
 ```
 
-Since everything from the YAML header will be cut out when converting the code, any title, author name or other field will be neglected.
+Como tudo do cabeçalho YAML será cortado ao converter o código, qualquer título, nome do autor ou outro campo será negligenciado.
 
-When selecting the *Jupyter Notebook* template in R Studio a directory including the `.Rmd` file and `images/` subfolder will be created. Open the R Markdown file and change it however you want. Once you press the *knit* button you should see a line telling you were the `.ipynb` file was saved. And you're done!
+Ao selecionar o modelo *Jupyter Notebook* no R Studio, um diretório incluindo o arquivo `.Rmd` e a subpasta `images/` serão criados. Abra o arquivo R Markdown e altere-o como quiser. Assim que você pressionar o botão *knit* você deverá ver uma linha dizendo que o arquivo `.ipynb` foi salvo. E pronto!
 
-When opening your file in Jupyter Notebook, please note that
+Ao abrir seu arquivo no Jupyter Notebook, observe que
 
-- if you use a local installation of Jupyter Notebook, the program will automatically have access to all the subdirectories that your file links to
-(e.g. the `images/` folder or any `data/` folder)
-- if you use Jupyter Notebook server you need to upload the `.ipynb` file as well as all subdirectories together as a zip file. To unzip, simply open a new R notebook and write into the first cell: `unzip("zip_file_name.zip")`.
+- se você usar uma instalação local do Jupyter Notebook, o programa terá acesso automaticamente a todos os subdiretórios aos quais seu arquivo está vinculado
+(por exemplo, a pasta `images/` ou qualquer pasta `data/`)
+- se você usa o servidor Jupyter Notebook, você precisa enviar o arquivo `.ipynb`, bem como todos os subdiretórios juntos como um arquivo zip. Para descompactar, basta abrir um novo notebook R e escrever na primeira célula: `unzip("zip_file_name.zip")`.
 
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo rmd_to_jupyter template"}
 knitr::include_graphics("vignettes/images/img_rmd_to_jupyter.png")
@@ -345,110 +341,112 @@ knitr::include_graphics("vignettes/images/img_rmd_to_jupyter.png")
 
 ---
 
-## Quarto template gallery
+## Galeria de modelos do Quarto
 
-### Quarto: Simple HTML output format - `html`
+### Quarto: Formato de saída HTML simples - `html`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_quarto_html.html).
+→ para um arquivo de exemplo veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_html.html).
 
-This template converts the Quarto file into a simple HTML file with a fixed navigation bar on the left side including the UHH logo. To create a subdirecory including the Quarto template file type into the console
+Este modelo converte o arquivo Quarto em um arquivo HTML simples com uma barra de navegação fixa no lado esquerdo, incluindo o logotipo CGMIND. Para criar um subdiretório incluindo o tipo de arquivo de modelo Quarto no console
 
 ```{r, eval=FALSE}
-UHHformats::create_quarto_doc(dirname = "choose_a_name", template = "html")
+Formatos CGMIND::create_quarto_doc(dirname = "choose_a_name", template = "html")
 ```
 
-Many of the Quarto options for HTML output are listed in the YAML header. If you want to know more about these settings I recommend the [HTML format reference](https://quarto.org/docs/reference/formats/html.html) for a complete list of available options.
+Muitas das opções Quarto para saída HTML estão listadas no cabeçalho YAML. Se você quiser saber mais sobre essas configurações, recomendo a [referência do formato HTML](https://quarto.org/docs/reference/formats/html.html) para obter uma lista completa das opções disponíveis.
 
-A nice Quarto feature is its extensive YAML intelligence (completion and diagnostics) in the RStudio IDE and in VS Code for project files, YAML front matter, and executable cell options. Just start with some letters and press the tab key on the keyboard. You will see a small dialog box with a list of available options.
+Um bom recurso do Quarto é sua extensa inteligência YAML (conclusão e diagnóstico) no RStudio IDE e no VS Code para arquivos de projeto, matéria frontal YAML e opções de células executáveis. Basta começar com algumas letras e pressionar a tecla tab no teclado. Você verá uma pequena caixa de diálogo com uma lista de opções disponíveis.
 
-The template contains already demo text, which will help you with e.g., writing equations, layouting images and tables, cross-referencing and adding citations in Quarto. If you need more help, go to Quarto's HTML documentation: [https://quarto.org/docs/output-formats/html-basics.html](https://quarto.org/docs/output-formats/html-basics.html).
+O modelo já contém texto de demonstração, que o ajudará, por exemplo, escrevendo equações, layout de imagens e tabelas, referências cruzadas e adição de citações em Quarto. Se precisar de mais ajuda, acesse a documentação HTML da Quarto: [https://quarto.org/docs/output-formats/html-basics.html](https://quarto.org/docs/output-formats/html- basics.html).
 
-```{r, echo=FALSE, fig.align='center', fig.alt="Quarto demo template for HTML output"}
+```{r, echo=FALSE, fig.align='center', fig.alt="Modelo de demonstração do quarto para saída HTML"}
 knitr::include_graphics("vignettes/images/img_quarto_html.png")
 ```
 
 
-### Quarto: Simple Microsoft Word output format - `word`
+### Quarto: Formato de saída simples do Microsoft Word - `word`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_quarto_word.docx).
+→ para um arquivo de exemplo veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_word.docx).
 
-Similar to the R Markdown `word_doc` template, this Quarto template uses a 'uhh-template.docx' Word file, which is based on the [standard template file](https://www.kus.uni-hamburg.de/themen/oeffentlichkeitsarbeit/corporate-design/vorlagen.html) of the University of Hamburg (UHH) except for the font type, which is by default 'Helvetica'. You can choose the font in the template by typing into the console
+Semelhante ao modelo `word_doc` do R Markdown, este modelo Quarto usa um arquivo do Word 'CGMIND-template.docx', que é baseado no [arquivo de modelo padrão](https://www.kus.uni-hamburg.de/ themen/oeffentlichkeitsarbeit/corporate-design/vorlagen.html) da Universidade de Hamburgo (CGMIND), exceto para o tipo de fonte, que é por padrão 'Helvetica'. Você pode escolher a fonte no modelo digitando no console
 
 ```{r, eval=FALSE}
-UHHformats::create_qmd_doc(dirname = "choose-a-name", 
-  template = "word", font = "TheSansUHH")
+Formatos CGMIND::create_qmd_doc(dirname = "escolha-um-nome",
+  template = "palavra", font = "TheSansCGMIND")
 ```
 
-More information is provided in the .qmd file. If you need additional help, go to Quarto's MS Word documentation: [https://quarto.org/docs/output-formats/ms-word.html](https://quarto.org/docs/output-formats/ms-word.html) If you feel like using your own template or the standard Word template (i.e. the Normal.dot file), simply provide the path to your file under `reference-doc:` or comment/delete this line, respectively. 
+Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda adicional, acesse a documentação do MS Word da Quarto: [https://quarto.org/docs/output-formats/ms-word.html](https://quarto.org/docs/output-formats/ms -word.html) Se você quiser usar seu próprio modelo ou o modelo padrão do Word (ou seja, o Normal.dot file), simplesmente forneça o caminho para o seu arquivo em `reference-doc:` ou comente/exclua esta linha, respectivamente.
 
-```{r, echo=FALSE, fig.align='center', fig.alt="Quarto demo template for MS Word output"}
+```{r, echo=FALSE, fig.align='center', fig.alt="Modelo de demonstração do quarto para saída do MS Word"}
 knitr::include_graphics("vignettes/images/img_quarto_word.png")
 ```
 
 
-### Quarto: Output format for a simple PDF document in English (default) or German - `pdf_simple`
+### Quarto: Formato de saída para um documento PDF simples em português (padrão) ou inglês - `pdf_simple`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_quarto_pdf_simple.pdf).
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_pdf_simple.pdf).
 
-This template converts the Quarto file into a simple PDF/LaTeX - based document with a similar design than the R Markdown template `pdf_simple`. You can choose here between two font types: 'Helvetica' (default) and the University's own font 'TheSansUHH'. To create a subdirecory including the Quarto template file, type into the console
+Este modelo converte o arquivo Quarto em um documento simples baseado em PDF/LaTeX com um design semelhante ao modelo R Markdown `pdf_simple`. Você pode escolher aqui entre dois tipos de fonte: 'Helvetica' (padrão) e a própria fonte da Universidade 'TheSansCGMIND'. Para criar um subdiretório incluindo o arquivo de modelo Quarto, digite no console
 
 ```{r, eval=FALSE}
-UHHformats::create_quarto_doc(dirname = "choose-a-name", 
+Formatos CGMIND::create_quarto_doc(dirname = "escolha-um-nome",
   template = "pdf_simple", font = "Helvetica")
 ```
 
-More information is provided in the .qmd file. If you need additional help, go to Quarto's PDF documentation: [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf-basics.html).
+Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda adicional, acesse a documentação em PDF do Quarto: [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf- basics.html).
 
-```{r, echo=FALSE, fig.align='center', fig.alt="Quarto demo template for a simple PDF document"}
+```{r, echo=FALSE, fig.align='center', fig.alt="Modelo de demonstração do quarto para um documento PDF simples"}
 knitr::include_graphics("vignettes/images/img_quarto_pdf_simple.png")
 ```
 
 
-### Quarto: Output format for a PDF report in English (default) or German - `pdf_report`
+### Quarto: Formato de saída para um relatório PDF em português (padrão) ou inglês - `pdf_report`
 
-→ for an example file see also [here](https://github.com/saskiaotto/UHHformats/blob/master/resources/examples/demo_quarto_pdf_report.pdf).
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_pdf_report.pdf).
 
-If you want to have more a report style document choose as template 'pdf_report':
+Se você deseja ter mais um documento de estilo de relatório, escolha como modelo 'pdf_report':
 
 ```{r, eval=FALSE}
-UHHformats::create_quarto_doc(dirname = "choose-a-name", 
+Formatos CGMIND::create_quarto_doc(dirname = "escolha-um-nome",
   template = "pdf_report", font = "Helvetica")
 ```
 
-The style of this template is similar to the R Markdown template `pdf_report` except for the cover page and the title page. The cover page can be adjusted using a different cover image and background and text color. Also the University logos on the title page can be replaced with your own logos.
+O estilo deste modelo é semelhante ao modelo do R Markdown `pdf_report`, exceto para a página de rosto e a página de título. A página de capa pode ser ajustada usando uma imagem de capa diferente e cor de fundo e de texto. Além disso, os logotipos da universidade na página de título podem ser substituídos por seus próprios logotipos.
 
-More information is provided in the .qmd file. If you need additional help, go to Quarto's PDF documentation: [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf-basics.html).
+Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda adicional, acesse a documentação em PDF do Quarto: [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf- basics.html).
 
 
-```{r, echo=FALSE, fig.align='center', fig.alt="Quarto demo template for a PDF report"}
+```{r, echo=FALSE, fig.align='center', fig.alt="Modelo de demonstração do quarto para um relatório PDF"}
 knitr::include_graphics("vignettes/images/img_quarto_pdf_report.png")
 ```
 
 
 ----
 
-## Useful resources
+## Recursos úteis
 
 - R Markdown
-    - The official [R Markdown documentation](https://rmarkdown.rstudio.com/lesson-1.html) from RStudio
-    - R Markdown [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+    - A [documentação oficial do R Markdown](https://rmarkdown.rstudio.com/lesson-1.html) do RStudio
+    - R Markdown [guia de referência](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
     - R Markdown [cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
-    - The online book [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, and Garrett Grolemund
+    - O livro online [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) de Yihui Xie, J. J. Allaire e Garrett Grolemund
 - Quarto
-    - The official [Quarto guide](https://quarto.org/docs/guide/)
-    - Quarto's [Gallery](https://quarto.org/docs/gallery/)
+    - O [guia oficial do Quarto](https://quarto.org/docs/guide/)
+    - [Galeria] do Quarto(https://quarto.org/docs/gallery/)
 - LaTeX
-    - The official [LaTeX help and documentation](https://www.latex-project.org/help/documentation/)
-    - The [overleaf](https://www.overleaf.com/learn) documentation
-- W3Schools Online Web Tutorial for [HTML](https://www.w3schools.com/html/default.asp) and for [CSS](https://www.w3schools.com/css/default.asp).
+    - A [ajuda e documentação oficial do LaTeX](https://www.latex-project.org/help/documentation/)
+    - A documentação [overleaf](https://www.overleaf.com/learn)
+- W3Schools Online Web Tutorial para [HTML](https://www.w3schools.com/html/default.asp) e para [CSS](https://www.w3schools.com/css/default.asp).
 
 
 
-## Credits
+## Créditos
 
-1. Julien Barnier's [rmdformats](https://github.com/juba/rmdformats) package
-2. The [rticles](https://github.com/rstudio/rticles) package 
-3. INWTlab's [ireports](https://github.com/INWTlab/ireports) package
-4. Michael Kearney's [rmd2jupyter](https://github.com/mkearney/rmd2jupyter) package
-5. Sarah Lang's [LaTeX template for a cheat sheet](https://www.overleaf.com/latex/templates/colourful-cheatsheet-template/qdsshbjktndd)
-6. Eli Holmes' [quarto titlepages template collection](https://nmfs-opensci.github.io/quarto_titlepages/) for the latest Quarto template to generate PDF report output.
+1. Pacote [UHHformats](https://github.com/saskiaotto/cgmindmodelos) de Saskia Otto
+2. Créditos derivados:
+- Pacote [rmdformats](https://github.com/juba/rmdformats) de Julien Barnier
+-  O pacote [rticles](https://github.com/rstudio/rticles)
+- Pacote [ireports](https://github.com/INWTlab/ireports) do INWTlab
+- Pacote [rmd2jupyter](https://github.com/mkearney/rmd2jupyter) de Michael Kearney
+- [modelo LaTeX para uma folha de dicas] de Sarah Lang (https://www.overleaf.com/latex/templates/colourful-cheatsheet-template/qdsshbjktndd)
+- Eli Holmes [coleção de modelos de páginas de título de quarto](https://nmfs-opensci.github.io/quarto_titlepages/) para o modelo Quarto mais recente para gerar saída de relatório em PDF.
