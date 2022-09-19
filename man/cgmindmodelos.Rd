@@ -3,10 +3,10 @@
 \docType{package}
 \name{cgmindmodelos}
 \alias{cgmindmodelos}
-\title{cgmindmodelos: R Markdown/Quarto templates designed for the CGMIND}
+\title{cgmindmodelos: R Markdown/Quarto templates designed for CGMIND/SAES/MS}
 \description{
 A package for creating HTML, PDF and Microsoft Word documents, reports,
-and cheat sheets using either R Markdown or now also Quarto.
+and cheat sheets using either R Markdown or Quarto.
 }
 \section{Quarto templates}{
 
@@ -15,12 +15,12 @@ Simply set the \emph{template} argument to one of the following types:
 \itemize{
 \item \emph{'html'}: Creates a simple HTML document with a
 fixed navigation bar on the left side.
-\item \emph{'word'}: Creates a simple MS Word document in English
-(default) and German.
+\item \emph{'word'}: Creates a simple MS Word document in Portuguese
+(default) and English.
 \item \emph{'pdf_simple'}: Creates a simple PDF/LaTeX document in
-English (default) and German.
+Portuguese (default) and English.
 \item \emph{'pdf_report'}: Creates a report-like PDF/LaTeX document in
-English (default) and German.
+Portuguese (default) and English.
 }
 }
 
@@ -33,12 +33,12 @@ function \code{\link{create_rmd_doc}}:
 fixed table of content.
 \item \code{\link{html_material}}: Creates a HTML document based on the
 bootstrap design 'material'.
-\item \code{\link{word_doc}}: Creates a simple MS Word document in English
-(default) and German.
+\item \code{\link{word_doc}}: Creates a simple MS Word document in Portuguese
+(default) and English.
 \item \code{\link{pdf_simple}}: Creates a simple PDF/LaTeX document in
-English (default) and German.
+Portuguese (default) and English.
 \item \code{\link{pdf_report}}: Creates a report-like PDF/LaTeX document in
-English (default) and German.
+Portuguese (default) and English.
 \item \code{\link{pdf_cheatsheet}}: Creates a simple PDF cheatsheet with
 box layouts.
 \item \code{\link{rmd_to_jupyter}}: Creates a Jupyter Notebook from a R
