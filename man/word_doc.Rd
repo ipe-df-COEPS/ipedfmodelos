@@ -10,7 +10,7 @@ word_doc(
   number_sections = FALSE,
   highlight = "default",
   reference_docx = "cgmind-template",
-  font = "Helvetica",
+  font = "Lato",
   language = "en",
   dpi = 144,
   pandoc_args = NULL,
