@@ -43,21 +43,21 @@
 #'  output: UHHthesis::word_doc
 #' }
 word_doc <- function(toc = FALSE, toc_depth = 4, number_sections = FALSE,
-  highlight = "default", reference_docx = "cgmind-template", font = "Helvetica",
+  highlight = "default", reference_docx = "cgmind-template", font = "Lato",
   language = "en", dpi = 144, pandoc_args = NULL, ...) {
 
   # Font setting
-  if (!font %in% c("Helvetica", "TheSansUHH", "other")) {
-    stop('Set the font option to "Helvetica", "TheSansUHH" or "other".')
+  if (!font %in% c("Lato", "Helvetica", "other")) {
+    stop('Set the font option to "Helvetica", "Lato" or "other".')
   }
   if (font == "Helvetica") filename = "cgmind-template-helvetica.docx"
-  if (font == "TheSansUHH") filename = "cgmind-template-cgmindmodelos.docx"
+  if (font == "Lato") filename = "cgmind-template-lato.docx"
 
   # Language setting
-  if (!language %in% c("en", "de")) {
-    stop('Set the language option either to English (language: "en") or German (language: "de").')
+  if (!language %in% c("pt","en", "de")) {
+    stop('Set the language option either to Portuguese (language: "pt"), English (language: "en") or German (language: "de").')
   }
-  if (language == "de") {
+  if (language %in% c("pt","de")) {
     if (!file.exists(file.path(".", "_bookdown.yml"))) {
       file.copy(
         from = find_resource("word_doc", file = "_bookdown.yml"),

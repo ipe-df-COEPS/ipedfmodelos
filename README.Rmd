@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- [![R-CMD-check](https://github.com/saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/ saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml) -->
 
 
-Este pacote R fornece R Markdown e **modelos Quarto** prontos para uso para formatos de saída HTML, PDF e Microsoft Word, que são usados ​​na Coordenação-Geral de Monitoramento de Indicadores da Secretaria de Atenção Especializada do Ministério da Saúde. O pacote visa incentivar a pesquisa reprodutível usando a sintaxe simples do Markdown enquanto incorpora todo o código R para produzir gráficos, tabelas e análises também. Incluídos no pacote estão modelos para
+Este pacote R fornece R Markdown e **modelos Quarto** prontos para uso para formatos de saída HTML, PDF e Microsoft Word, que são usados na [Coordenação-Geral de Monitoramento de Indicadores da Secretaria de Atenção Especializada do Ministério da Saúde](https://github.com/cgmind-saes). O pacote visa incentivar a pesquisa reprodutível usando a sintaxe simples do Markdown enquanto incorpora todo o código R para produzir gráficos, tabelas e análises também. Incluídos no pacote estão modelos para
 
 - esboços/análises preliminares internas
     - [R Markdown: documento PDF simples em português (padrão) ou inglês - `pdf_simple`]
@@ -34,7 +34,7 @@ Este pacote R fornece R Markdown e **modelos Quarto** prontos para uso para form
 - conversões de documentos R Markdown para Jupyter Notebooks
     - [R Markdown: formato de saída do Jupyter Notebook - `rmd_to_jupyter`]
 
-A fonte padrão para todos os modelos é 'Helvetica', mas a fonte pode ser substituída pelo estilo de fonte 'Latto' nos modelos PDF e Word.A maioria dos modelos inclui ainda a identidade visual da CGMIND e adotou seu design, mas pode ser facilmente substituído no cabeçalho YAML e também o estilo pode ser modificado, por exemplo, adicionando sua própria folha de estilo CSS no cabeçalho YAML do modelo HTML. Portanto, esses modelos não se limitam a funcionários da CGMIND.
+A fonte padrão para todos os modelos é 'Lato', mas a fonte pode ser substituída pelo estilo de fonte 'Helvetica' nos modelos PDF e Word.A maioria dos modelos inclui ainda a identidade visual da CGMIND e adotou seu design, mas pode ser facilmente substituído no cabeçalho YAML e também o estilo pode ser modificado, por exemplo, adicionando sua própria folha de estilo CSS no cabeçalho YAML do modelo HTML. Portanto, esses modelos não se limitam a servidores ou colaboradores da CGMIND.
 
 Os templates foram desenvolvidos de uma adaptação livre daqueles existentes no pacote UHHformats. **Para ajudar a começar, todos os modelos já contêm alguns exemplos de texto e código** para formatar texto, escrever equações, criar tabelas e figuras com referências cruzadas e incluir referências.
 
