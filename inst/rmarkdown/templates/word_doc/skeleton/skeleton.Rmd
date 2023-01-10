@@ -103,10 +103,10 @@ A tabela \@ref(tab:kable1) é um exemplo do uso de *knitr::kable()* para gerar a
 
 ```{r kable1}
 # Importe o conjunto de dados da pasta dados/
-cnes <- read.csv("dados/cnes.csv")
+tp_unidades <- read.csv("dados/tp_unidades.csv")
 
 # Plota apenas um subconjunto dos dados
-df <- cnes[1:5, 1:6]
+df <- tp_unidades[1:5, 1:6]
 knitr::kable(
   df,
   caption = "Esta é uma tabela produzida com knitr::kable().",
@@ -123,7 +123,7 @@ Se você estiver interessado em mais adaptações de tabelas para saída do Word
 
 ```{r huxtable, eval=ifelse(nzchar(system.file(package = "huxtable")), TRUE, FALSE)}
 library(huxtable)
-df <- cnes[1:5, 1:6]
+df <- tp_unidades[1:5, 1:6]
 ht <- as_hux(df, add_rownames = "modelo")
 ht <- set_outer_borders(ht, 0.4)
 bold(ht)[1,] <- TRUE
@@ -133,7 +133,7 @@ align(ht)[,1] <- 'left'
 number_format(ht) <- 2
 widdth(ht) <- 1
 font_size(ht) <- 10
-caption(ht) <- "Visão geral das primeiras linhas e colunas no conjunto de dados cnes."
+caption(ht) <- "Visão geral das primeiras linhas e colunas no conjunto de dados tp_unidades."
 
 ht
 ```
@@ -144,17 +144,17 @@ ht
 As figuras podem ser produzidas diretamente com R e exibidas aqui. Semelhante às imagens externas, as legendas e rótulos das figuras são colocados dentro das opções de referência cruzada (consulte a Fig. \@ref(fig:base-fig)).
 
 ```{r base-fig, fig.cap = "Relação entre potência e economia de combustível."}
-plot(cnes$hp, cnes$mpg,
+plot(tp_unidades$hp, tp_unidades$mpg,
 xlab = "Potência Bruta",
 ylab = "Milhas por galão",
 pc = 19)
-abline(lm(mpg ~ hp, data = cnes), col = "red")
+abline(lm(mpg ~ hp, data = tp_unidades), col = "red")
 ```
 
 Aqui, para comparação, um boxplot com uma altura de imagem diferente (Fig. \@ref(fig:boxplot-fig)).
 
 ```{r boxplot-fig, fig.cap = "Diferenças de combustível entre os tipos de transmissão (0 = automática, 1 = manual).", fig.height = 3}
-boxplot(mpg ~ am, cnes)
+boxplot(mpg ~ am, tp_unidades)
 ```
 
 A propósito, as ilustrações, independentemente de serem imagens externas ou diagramas criados em R, sempre são exibidas em toda a largura do documento do Word. Infelizmente, as configurações por meio das opções de bloco de código 'fig.height' e 'out.width' não funcionam atualmente no Word! Para imagens externas, ajuste a largura por meio do tamanho do próprio arquivo de imagem.
