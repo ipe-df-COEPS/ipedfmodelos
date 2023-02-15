@@ -15,7 +15,7 @@ output:
   cgmindmodelos::word_doc:
     toc: false
     language: "pt"  # alternative: "en" for English
-    font: "Lato" # alternative: "Helvetica" 
+    font: "Lato" # alternative: "Georgia" 
 ### Comment the next line if 'language: "en" ' and 'toc: true'
 toc-title: "Sumário"    
 ---
@@ -66,7 +66,7 @@ Configure o cabeçalho YAML incluindo os seguintes elementos:
     - *dpi: 144*
  * *toc-title*: Se a configuração for *toc: TRUE*, o MS Word gera automaticamente uma tabela de conteúdo com um título em português, e não quiser o nome 'sumário', você deve especificar aqui um título em português. Se o idioma for inglês (*idioma: "en"*), gera-se automaticamente título em inglês.
 
-Por padrão *cgmindmodelos::word_doc* usa um arquivo de modelo 'cgmind-template.docx', que é baseado no [arquivo de modelo padrão](https://www.kus.uni-hamburg.de/themen/oeffentlichkeitsarbeit/corporate -design/vorlagen.html) da Universidade de Hamburgo (UHH), exceto pelo tipo de fonte, que é por padrão 'Lato'. Também pode usar a fonte Helvetica; para tal, substitua *font = "Lato"* por *font = "Helvetica"*.
+Por padrão *cgmindmodelos::word_doc* usa um arquivo de modelo 'cgmind-template.docx', que é baseado no [arquivo de modelo padrão](https://www.kus.uni-hamburg.de/themen/oeffentlichkeitsarbeit/corporate -design/vorlagen.html) da Universidade de Hamburgo (UHH), exceto pelo tipo de fonte, que é por padrão 'Lato'. Também pode usar a fonte Georgia; para tal, substitua *font = "Lato"* por *font = "Georgia"*.
 
 No entanto, se você quiser usar seu próprio modelo ou o modelo padrão do Word (ou seja, o arquivo Normal.dot), simplesmente forneça o caminho para o arquivo ou escreva "padrão" para o último caso (*reference_docx: "default"*). Para mais opções veja também a documentação da função *bookdown::word_document2*, que é chamada internamente.
 

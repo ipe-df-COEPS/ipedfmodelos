@@ -18,7 +18,7 @@
 #'        The 'cgmind-template.docx' template implements most of the standard requirement at the UHH biology
 #'        department. If you prefer another template, pass the file name to this argument or simply use
 #'        'default' to use your standard Word template.
-#' @param font character; default font in the template file is "Helvetica"; for members of the UHH there is also
+#' @param font character; default font in the template file is "Georgia"; for members of the UHH there is also
 #'        the font "TheSansUHH" available. If you want to provide your own Word template, there is no
 #'        need to set any font here.
 #' @param language character; the document language. If set to "de" (ISO code for German), a configuration file
@@ -47,10 +47,10 @@ word_doc <- function(toc = FALSE, toc_depth = 4, number_sections = FALSE,
   language = "en", dpi = 144, pandoc_args = NULL, ...) {
 
   # Font setting
-  if (!font %in% c("Lato", "Helvetica", "other")) {
-    stop('Set the font option to "Helvetica", "Lato" or "other".')
+  if (!font %in% c("Lato", "Georgia", "other")) {
+    stop('Set the font option to "Georgia", "Lato" or "other".')
   }
-  if (font == "Helvetica") filename = "cgmind-template-helvetica.docx"
+  if (font == "Georgia") filename = "cgmind-template-georgia.docx"
   if (font == "Lato") filename = "cgmind-template-lato.docx"
 
   # Language setting
