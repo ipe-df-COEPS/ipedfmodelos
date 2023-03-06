@@ -1,7 +1,7 @@
 Package: cgmindmodelos
 Type: Package
 Title: Modelos para formatos de saída HTML e PDF/LaTeX projetados para CGMIND/SAES/<S
-Version: 0.0.6.20230307
+Version: 0.0.7.20230307
 Date: 2023-03-06
 Authors@R: c(person("Rodrigo", "Borges", email="rodrigo.emmanuel@saude.gov.br",
     role=c("aut","cre")))
