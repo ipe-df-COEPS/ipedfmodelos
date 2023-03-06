@@ -1,4 +1,4 @@
-#' Convert to report-like PDF/LaTeX document in English (default) or German
+#' Convert to report-like PDF/LaTeX document in Portuguese (default) or English
 #'
 #' This function serves as wrapper to \code{\link[rmarkdown]{pdf_document}}, with a
 #' custom Pandoc \LaTeX template and different default values for other arguments
@@ -31,9 +31,9 @@
 #'   \item \code{author} Character of single or multiple author(s).
 #'   \item \code{date} The date (automatically set).
 #'   \item \code{fontsize} The font size for the body text (default is 11pt).
-#'   \item \code{german} If option is set to 'true', the table and figure caption as
-#'              well as the abstract and reference header will be in German; default
-#'              is 'false' (i.e., English).
+#'   \item \code{portuguese} If option is set to 'false', the table and figure caption as
+#'              well as the abstract and reference header will be in English; default
+#'              is 'true' (i.e., Portuguese).
 #'   \item \code{linkcolor}, \code{filecolor}, \code{citecolor}, \code{urlcolor}
 #'              Colors for internal links (incl. ToC), external links, citation
 #'              links, and linked URLs.
@@ -57,14 +57,14 @@
 #' @export
 #'
 pdf_report <- function(toc = TRUE,toc_depth = 5, number_sections = TRUE,
-  highlight = "kate", font = "Helvetica", citation_package = "natbib",
+  highlight = "kate", font = "Lato", citation_package = "natbib",
   latex_engine = "xelatex", ...) {
 
   # Font setting
-  if (!font %in% c("Helvetica", "TheSansUHH", "other")) {
+  if (!font %in% c("Lato", "Georgia", "other")) {
     stop('Set the font option to "Helvetica", "TheSansUHH" or "other".')
   }
-  if (font %in% c("Helvetica", "TheSansUHH")) {
+  if (font %in% c("Lato", "Georgia")) {
     copy_font_files("pdf_report", font)
   }
 

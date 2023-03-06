@@ -37,7 +37,7 @@ The 'cgmind-template.docx' template implements most of the standard requirement 
 department. If you prefer another template, pass the file name to this argument or simply use
 'default' to use your standard Word template.}
 
-\item{font}{character; default font in the template file is "Helvetica"; for members of the UHH there is also
+\item{font}{character; default font in the template file is "Georgia"; for members of the UHH there is also
 the font "TheSansUHH" available. If you want to provide your own Word template, there is no
 need to set any font here.}
 

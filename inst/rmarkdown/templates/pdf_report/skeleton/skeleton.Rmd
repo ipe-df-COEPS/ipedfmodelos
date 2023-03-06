@@ -3,13 +3,13 @@ title: "Document title"
 author: "Author name(s)"
 date: \today
 fontsize: 11pt
-german: false # default is English
+portuguese: true # default is Portuguese
 bibliography: bib/references.bib, bib/packages.bib
 bibliographystyle: bib/bibstyle.bst
 params:
   # replace path to images or remove lines (one has to be kept in!)
   cover: images/cover.png
-  title_logo_left: images/uhh_logo.png
+  title_logo_left: images/cgmind_logo.png
   title_logo_right: images/min_logo.png
   logo_small: images/logo_icon.png
 header-includes: 
@@ -19,8 +19,8 @@ header-includes:
   - \newcommand{\titlelogoright}{`r gsub("_", "\\_", params$title_logo_right)`}
   - \newcommand{\logosmall}{`r gsub("_", "\\_", params$logo_small)`}
 output: 
-  UHHformats::pdf_report:
-    font: "Helvetica" # alternative: "TheSansUHH"  
+  cgmindmodelos::pdf_report:
+    font: "Lato" # alternative: "Georgia"  
 ---
 
 ```{r setup, include = FALSE}
@@ -59,7 +59,7 @@ Configure the YAML header including the following elements:
 * `author`: Character of single or multiple author(s)
 * `date`: The date; by default `\date`, will populate the date automatically.
 * `fontsize`: Font size for body text; choose between `10pt`, `11pt` (default), and `12pt`.
-* `german`: If option is set to `true`, the table and figure caption, the page information, as well as the ToC and reference header will be in German; default is `false` (i.e., English).
+* `english`: If option is set to `true`, the table and figure caption, the page information, as well as the ToC and reference header will be in English; default is `false` (i.e., Portuguese).
 * `linkcolor`, `filecolor`, `citecolor`, `urlcolor`: Specify here colors for internal links (incl. ToC), external links, citation links, and linked URLs, respectively, if you don't want the default colors; use options allowed by xcolor, including the dvipsnames, svgnames, and x11names lists.
 * `classoption`: Further options for the document class `article` (used for this report); specify here whether report should be 'onesided' (default) or 'twosided'.
 * `bibliography`: A path to the bibliography file(s) to use for references (BibTeX *.bib* file). This template uses the bibliography-related package [natbib](https://ctan.org/pkg/natbib). The current file 'references.bib' in the 'bib/' folder includes 3 dummy references; either insert your references into this file or replace the file with your own.
@@ -67,16 +67,16 @@ Configure the YAML header including the following elements:
 * `params`: The cover and logo image directories for the front page are specified here.
 * `header_includes`: Here you can add additional \LaTeX code to include in the header, before the `\\begin\{document\}` statement. 
 * If you want to add additional LaTeX code to include before the `\\end\{document\}` statement use the field `include_after`. 
-* `output`: The nested fields for the output field are based on the arguments of the output function. Since `UHHformats::pdf_report` is based on `rmarkdown::pdf_document`, see its help page for more options. Current default settings are
+* `output`: The nested fields for the output field are based on the arguments of the output function. Since `cgmindmodelos::pdf_report` is based on `rmarkdown::pdf_document`, see its help page for more options. Current default settings are
     * `toc = TRUE`
     * `toc_depth = 5`
     * `number_sections = TRUE`
     * `highlight = "kate"`
-    * `font = "Helvetica"`
+    * `font = "Lato"`
     * `citation_package = "natbib"`
     * `latex_engine = "xelatex"`
     
-If you are associated with the UHH you can also use the University's own font "TheSansUHH". In that case replace `font = "Helvetica"` with `font = "TheSansUHH"`. To use another font, simply use the setting "other" and replace the 'font_XXX.ttf' files in the working directory with your own files. Please note, that you have to name these files exactly as the template font files.
+If you are associated with the UHH you can also use font "Georgia". In that case replace `font = "Lato"` with `font = "Georgia"`. To use another font, simply use the setting "other" and replace the 'font_XXX.ttf' files in the working directory with your own files. Please note, that you have to name these files exactly as the template font files.
 
 
 # The Body of the Article

@@ -2,14 +2,14 @@
 % Please edit documentation in R/pdf_report.R
 \name{pdf_report}
 \alias{pdf_report}
-\title{Convert to report-like PDF/LaTeX document in English (default) or German}
+\title{Convert to report-like PDF/LaTeX document in Portuguese (default) or English}
 \usage{
 pdf_report(
   toc = TRUE,
   toc_depth = 5,
   number_sections = TRUE,
   highlight = "kate",
-  font = "Helvetica",
+  font = "Lato",
   citation_package = "natbib",
   latex_engine = "xelatex",
   ...
@@ -58,9 +58,9 @@ Possible arguments for the YAML header are:
 \item \code{author} Character of single or multiple author(s).
 \item \code{date} The date (automatically set).
 \item \code{fontsize} The font size for the body text (default is 11pt).
-\item \code{german} If option is set to 'true', the table and figure caption as
-well as the abstract and reference header will be in German; default
-is 'false' (i.e., English).
+\item \code{portuguese} If option is set to 'false', the table and figure caption as
+well as the abstract and reference header will be in English; default
+is 'true' (i.e., Portuguese).
 \item \code{linkcolor}, \code{filecolor}, \code{citecolor}, \code{urlcolor}
 Colors for internal links (incl. ToC), external links, citation
 links, and linked URLs.
