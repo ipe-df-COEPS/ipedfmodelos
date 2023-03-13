@@ -1,4 +1,4 @@
-#' Convert to simple PDF/LaTeX document in English (en)
+#' Convert to simple PDF/LaTeX document in Portuguese (pt)
 #'
 #' This function serves as wrapper to \code{\link[rmarkdown]{pdf_document}}, with a
 #' custom Pandoc \LaTeX template and different default values for other arguments
@@ -12,8 +12,8 @@
 #' @param highlight character; syntax highlighting style. Supported styles include "default",
 #'        "tango", "pygments", "kate" (default here), "monochrome", "espresso", "zenburn", and "haddock".
 #'        Pass \code{NULL} to prevent syntax highlighting.
-#' @param font character; default font is "Helvetica"; for members of the UHH there is also the font
-#'        "TheSansUHH" available. If you want to use another font, simply use the setting "other" and
+#' @param font character; default font is "Lato"; there is also the font
+#'        "Georgia" available. If you want to use another font, simply use the setting "other" and
 #'        replace the .ttf files for regular, italic, bold, and bold-italic font with your own files
 #'        (should be named EXACTLY as the template font files).
 #' @param citation_package character; the \LaTeX package to process "citations", "natbib" (default) or
@@ -32,9 +32,9 @@
 #'   \item \code{heder_right} A second right header (e.g. authors).
 #'   \item \code{date} The date (automatically set).
 #'   \item \code{fontsize} The font size for the body text (default is 11pt).
-#'   \item \code{german} If option is set to 'true', the table and figure caption as
-#'              well as the abstract and reference header will be in German; default
-#'              is 'false' (i.e., English).
+#'   \item \code{portuguese} If option is set to 'false', the table and figure caption as
+#'              well as the abstract and reference header will be in English; default
+#'              is 'true' (i.e., Portuguese).
 #'   \item \code{linkcolor}, \code{filecolor}, \code{citecolor}, \code{urlcolor}
 #'              Colors for internal links (incl. ToC), external links, citation
 #'              links, and linked URLs.
@@ -58,13 +58,13 @@
 #' @export
 #'
 pdf_simple <- function(number_sections = TRUE, highlight = "kate",
-  font = "Helvetica", citation_package = "natbib", latex_engine = "xelatex", ...) {
+  font = "Lato", citation_package = "natbib", latex_engine = "xelatex", ...) {
 
   # Font setting
-  if (!font %in% c("Helvetica", "TheSansUHH", "other")) {
-    stop('Set the font option to "Helvetica", "TheSansUHH" or "other".')
+  if (!font %in% c("Lato", "Georgia", "other")) {
+    stop('Set the font option to "Lato", "Georgia" or "other".')
   }
-  if (font %in% c("Helvetica", "TheSansUHH")) {
+  if (font %in% c("Lato", "Georgia")) {
     copy_font_files("pdf_simple", font)
   }
 

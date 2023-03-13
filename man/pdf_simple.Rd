@@ -2,12 +2,12 @@
 % Please edit documentation in R/pdf_simple.R
 \name{pdf_simple}
 \alias{pdf_simple}
-\title{Convert to simple PDF/LaTeX document in English (en)}
+\title{Convert to simple PDF/LaTeX document in Portuguese (pt)}
 \usage{
 pdf_simple(
   number_sections = TRUE,
   highlight = "kate",
-  font = "Helvetica",
+  font = "Lato",
   citation_package = "natbib",
   latex_engine = "xelatex",
   ...
@@ -20,8 +20,8 @@ pdf_simple(
 "tango", "pygments", "kate" (default here), "monochrome", "espresso", "zenburn", and "haddock".
 Pass \code{NULL} to prevent syntax highlighting.}
 
-\item{font}{character; default font is "Helvetica"; for members of the UHH there is also the font
-"TheSansUHH" available. If you want to use another font, simply use the setting "other" and
+\item{font}{character; default font is "Lato"; there is also the font
+"Georgia" available. If you want to use another font, simply use the setting "other" and
 replace the .ttf files for regular, italic, bold, and bold-italic font with your own files
 (should be named EXACTLY as the template font files).}
 
@@ -55,9 +55,9 @@ Possible arguments for the YAML header are:
 \item \code{heder_right} A second right header (e.g. authors).
 \item \code{date} The date (automatically set).
 \item \code{fontsize} The font size for the body text (default is 11pt).
-\item \code{german} If option is set to 'true', the table and figure caption as
-well as the abstract and reference header will be in German; default
-is 'false' (i.e., English).
+\item \code{portuguese} If option is set to 'false', the table and figure caption as
+well as the abstract and reference header will be in English; default
+is 'true' (i.e., Portuguese).
 \item \code{linkcolor}, \code{filecolor}, \code{citecolor}, \code{urlcolor}
 Colors for internal links (incl. ToC), external links, citation
 links, and linked URLs.
