@@ -2,6 +2,7 @@
 title: "Título do Documento"
 subtitle: "Subtítulo"
 author: "Nome do autor"
+reportnumber: "01"
 header_left: "Cabeçalho à esquerda"
 header_right: "Cabeçalho à direita"
 date: \today

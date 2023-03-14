@@ -54,6 +54,7 @@ Possible arguments for the YAML header are:
 \item \code{header_left} A running title as left header.
 \item \code{heder_right} A second right header (e.g. authors).
 \item \code{date} The date (automatically set).
+\item \code{reportnumber} The number (manually set).
 \item \code{fontsize} The font size for the body text (default is 11pt).
 \item \code{portuguese} If option is set to 'false', the table and figure caption as
 well as the abstract and reference header will be in English; default
