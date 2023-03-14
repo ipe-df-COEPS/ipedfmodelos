@@ -231,6 +231,23 @@ $endfor$
 % }}}
 
 
+% Adjust abstract section (full width and left aligned)
+\renewenvironment{abstract}
+ {\small
+  \begin{flushleft}
+  \bfseries \abstractname\vspace{-0.5em}\vspace{0pt}
+  \end{flushleft}
+  \list{}{
+    \setlength{\leftmargin}{.0cm}
+    \setlength{\rightmargin}{\leftmargin}
+  }
+  \item\relax}
+ {\endlist}
+
+
+
+% Document ----------------
+        \begin{document}
 \begin{center}
   \begin{minipage{13cm}
   \begin{center}
@@ -283,7 +300,7 @@ $endfor$
             }}
         }
 
-        \begin{document}
+
         \begin{tikzpicture}
         \pic[rounded corners=0.5cm] (B) at (0.5,-4) {tricolor={5}{3}{0.33}{0.67}{gray!80}{gray!80}{gray!80}};
         \node at (B-left)   {};
@@ -300,27 +317,6 @@ $endfor$
   \pic[rounded corners=0.5cm] (B) at (0.5,-4) {tricolor={5}{3}{0.33}{0.67}{darkblue!80}{darkblue!80}{darkblue!80}};
   \end{minipage}\hfill
 \end{center}
-
-% Adjust abstract section (full width and left aligned)
-\renewenvironment{abstract}
- {\small
-  \begin{flushleft}
-  \bfseries \abstractname\vspace{-0.5em}\vspace{0pt}
-  \end{flushleft}
-  \list{}{
-    \setlength{\leftmargin}{.0cm}
-    \setlength{\rightmargin}{\leftmargin}
-  }
-  \item\relax}
- {\endlist}
-
-
-
-% Document ----------------
-
-\begin{document}
-
-\maketitle
 
 $if(abstract)$
 \begin{abstract}
