@@ -214,6 +214,7 @@ $endfor$
 \makeatletter
 \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
 \begin{flushleft}
+  \vskip 0.5em%
   \textbf{\color{bluegray}\huge\@title}
   \vskip 0.25em%
   $if(subtitle)$
@@ -221,10 +222,6 @@ $endfor$
   $endif$
 
   \vskip 0.5em%
-  $if(author)$
-  \large\color{bluegray} $author$\par
-  $endif$
-  \color{bluegray}\@date
 \end{flushleft}\egroup
 }
 \makeatother
@@ -304,7 +301,11 @@ $endfor$
         \pic[rounded corners=0.5cm] (B) at (0.5,-4) {tricolor={5}{3}{0.33}{0.67}{gray!80}{gray!80}{gray!80}};
         \node at (B-left)   {};
         \node at (B-middle) {$reportnumber$};
-        \node at (B-right)  {};
+        \node at (B-right)  {  $if(author)$
+  \large\color{bluegray} $author$\par
+  $endif$
+  \color{white}\@date
+};
         \end{tikzpicture}
 
     	\end{center}
@@ -337,7 +338,8 @@ $endfor$
         }
 
   \begin{tikzpicture}
-  \pic[rounded corners=0.5cm] (B) at (0.5,-4) {tricolor={5}{19}{0.33}{0.67}{bluegray!80}{bluegray!80}{bluegray!80}};
+  \pic[rounded corners=0.5cm] (B) at (0.5,-4) {tricolor={19}{1}{0.33}{0.67}{bluegray!80}{bluegray!80}{bluegray!80}};
+   \node at (B-right)  {};
   \end{tikzpicture}
   \end{minipage}\hfill
 \end{center}
