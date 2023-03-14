@@ -209,7 +209,26 @@ $endfor$
 
 % Title
 \title{$title$}
-\date{$date$}
+
+% Header and footer {{{
+\pagestyle{fancy}
+
+\thispagestyle{empty}
+
+ $if(header_left)$
+ \fancyhead[L]{$header_left$}
+ $else$
+ \fancyhead[L]{}
+ $endif$
+
+ $if(header_right)$
+ \fancyhead[R]{$header_right$}
+ $else$
+ \fancyhead[R]{}
+ $endif$
+
+
+% }}}
 
 
 \begin{center}
@@ -237,25 +256,6 @@ $endfor$
 \makeatother
 
 
-% Header and footer {{{
-\pagestyle{fancy}
-
-\thispagestyle{empty}
-
- $if(header_left)$
- \fancyhead[L]{$header_left$}
- $else$
- \fancyhead[L]{}
- $endif$
-
- $if(header_right)$
- \fancyhead[R]{$header_right$}
- $else$
- \fancyhead[R]{}
- $endif$
-
-
-% }}}
     \end{center}
   \end{minipage}\hfill
  \begin{minipage}{3cm}
@@ -293,6 +293,12 @@ $endfor$
 
     	\end{center}
     \end{minipage}
+\end{center}
+
+\begin{center}
+  \begin{minipage}[19cm]
+  \pic[rounded corners=0.5cm] (B) at (0.5,-4) {tricolor={5}{3}{0.33}{0.67}{darkblue!80}{darkblue!80}{darkblue!80}};
+  \end{minipage}\hfill
 \end{center}
 
 % Adjust abstract section (full width and left aligned)
