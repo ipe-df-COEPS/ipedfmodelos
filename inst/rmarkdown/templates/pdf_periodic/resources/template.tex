@@ -209,6 +209,25 @@ $endfor$
 
 % Title
 \title{$title$}
+\date{$date$}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \textbf{\color{bluegray}\huge\@title}
+  \vskip 0.25em%
+  $if(subtitle)$
+  \textbf{\color{bluegray}\large $subtitle$}
+  $endif$
+
+  \vskip 0.5em%
+  $if(author)$
+  \large\color{bluegray} $author$\par
+  $endif$
+  \color{bluegray}\@date
+\end{flushleft}\egroup
+}
+\makeatother
 
 % Header and footer {{{
 \pagestyle{fancy}
@@ -252,25 +271,7 @@ $endfor$
     \begin{minipage}{13cm}
       \begin{center}
       \raggedright
-      \makeatletter
-      \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
-      \begin{flushleft}
-      \textbf{\color{bluegray}\huge\@title}
-      \vskip 0.25em%
-  $if(subtitle)$
-  \textbf{\color{bluegray}\large $subtitle$}
-  $endif$
-
-  \vskip 0.5em%
-  $if(author)$
-  \large\color{bluegray} $author$\par
-  $endif$
-  \color{bluegray}\@date
-\end{flushleft}\egroup
-}
-\makeatother
-
-
+      \maketitle
     \end{center}
   \end{minipage}\hfill
  \begin{minipage}{3cm}
