@@ -1,9 +1,9 @@
 ---
-title: "Document title"
-subtitle: "Subtitle"
-author: "Author name(s)"
-header_left: "Runninghead"
-header_right: "Author"
+title: "Título do Documento"
+subtitle: "Subtítulo"
+author: "Nome do autor"
+header_left: "Cabeçalho à esquerda"
+header_right: "Cabeçalho à direita"
 date: \today
 fontsize: 11pt
 portuguese: true # default is Portuguese / alternatively english may be selected
@@ -43,176 +43,178 @@ knitr::write_bib(
 
 <!-- This is how you can define comments in an .Rmd file (outside the R code snippets) -->
 
-# Introduction 
+# Introdução 
 
-Configure the YAML header including the following elements:
+Configure o cabeçalho YAML incluindo os seguintes elementos:
 
-* `title`: Title
-* `subtitle`: Subitle; remove option completely, if you don't need a subtitle.
-* `author`: Character of single or multiple author(s)
-* `header_left`: A running title as left header; remove option to leave blank.
-* `header_right`: A second right header (e.g. authors); remove option to leave blank.
-* `date`: The date; by default `\date`, will populate the date automatically.
-* `fontsize`: Font size for body text; choose between `10pt`, `11pt` (default), and `12pt`.
-* `linkcolor`, `filecolor`, `citecolor`, `urlcolor`: Specify here colors for internal links, external links, citation links, and linked URLs, respectively, if you don't want the default colors; use options allowed by xcolor, including the dvipsnames, svgnames, and x11names lists.
-* `german`: If option is set to `true`, the table and figure caption as well as the abstract and reference header will be in German; default is `false` (i.e., English).
-* `bibliography`: A path to the bibliography file(s) to use for references (BibTeX *.bib* file). This template uses the bibliography-related package [natbib](https://ctan.org/pkg/natbib). The current file 'references.bib' in the 'bib/' folder includes 3 dummy references; either insert your references into this file or replace the file with your own. 
-* `bibliographystyle`: The style is provided in the bibstyle.bst file, which adopts the [SAGE Harvard](https://uk.sagepub.com/sites/default/files/sage_harvard_reference_style_0.pdf) reference style. Just leave the file as it is.
-* `abstract`: Write here your abstract or remove option if you don't want to include an abstract.
-* `output`: The nested fields for the output field are based on the arguments of the output function. Since `cgmindmodelos::pdf_simple` is based on `rmarkdown::pdf_document`, see its help page for more options. Current default settings are
-    * `number_sections: TRUE`
-    * `highlight: "kate"`
-    * `font = "Lato"`
-    * `citation_package: "natbib"`
-    * `latex_engine: "xelatex"`
-* `header_includes`: Here you can add additional \LaTeX code to include in the header, before the `\\begin\{document\}` statement. 
-* If you want to add additional LaTeX code to include before the `\\end\{document\}` statement use the field `include_after`. 
+* `title`: Título
+* `subtitle`: Legenda; remova a opção completamente, se você não precisar de uma legenda.
+* `author`: Caractere de um ou vários autores
+* `header_left`: Um título corrido como cabeçalho esquerdo; remover opção para deixar em branco.
+* `header_right`: Um segundo cabeçalho à direita (por exemplo, autores); remover opção para deixar em branco.
+* `date`: A data; por padrão `\date`, irá preencher a data automaticamente.
+* `fontsize`: Tamanho da fonte para o corpo do texto; escolha entre `10pt`, `11pt` (padrão) e `12pt`.
+* `linkcolor`, `filecolor`, `citecolor`, `urlcolor`: Especifique aqui cores para links internos, links externos, links de citação e URLs vinculados, respectivamente, se você não quiser as cores padrão; use as opções permitidas pelo xcolor, incluindo as listas dvipsnames, svgnames e x11names.
+* `portuguese`: Se a opção for definida como `false`, a legenda da tabela e da figura, bem como o resumo e o cabeçalho de referência serão em inglês; o padrão é `true` (ou seja, português).
+* `bibliografia`: Um caminho para o(s) arquivo(s) bibliográfico(s) a ser(em) usado(s) para referências (arquivo BibTeX *.bib*). Este modelo usa o pacote relacionado à bibliografia [natbib](https://ctan.org/pkg/natbib). O arquivo atual 'references.bib' na pasta 'bib/' inclui 3 referências fictícias; insira suas referências neste arquivo ou substitua o arquivo pelo seu.
+* `bibliographystyle`: O estilo é fornecido no arquivo bibstyle.bst, que adota o estilo de referência [SAGE Harvard](https://uk.sagepub.com/sites/default/files/sage_harvard_reference_style_0.pdf). Basta deixar o arquivo como está.
+* `abstract`: Escreva aqui seu resumo ou remova a opção caso não queira incluir um resumo.
+* `output`: Os campos aninhados para o campo de saída são baseados nos argumentos da função de saída. Já que `cgmindmodelos::pdf_periodic` é baseado em `rmarkdown::pdf_document`, veja sua página de ajuda para mais opções. As configurações padrão atuais são
+     * `number_sections: TRUE`
+     * `highlit: "kate"`
+     * `font = "Lato"`
+     * `pacote_citação: "natbib"`
+     * `latex_engine: "xelatex"`
+* `header_includes`: Aqui você pode adicionar código \LaTeX adicional para incluir no cabeçalho, antes da instrução `\\begin\{document\}`.
+* Se você quiser adicionar código LaTeX adicional para incluir antes da instrução `\\end\{document\}`, use o campo `include_after`.
 
-If you are associated with the CGMIND you can also use the University's own font "Georgia". In that case replace `font = "Lato"` with `font = "Georgia"`. To use another font, simply use the setting "other" and replace the 'font_XXX.ttf' files in the working directory with your own files. Please note, that you have to name these files exactly as the template font files.
-
-
-# Methods
-
-## R Markdown syntax vs \LaTeX syntax
-
-As with any .Rmd file you can write the entire report in the R Markdown syntax. However, if you are familiar with \LaTeX you can also mix both:
-
-### R Markdown subsection
-
-This is a dummy text to show you how to write in **bold** and in *italics*.
-
-\subsubsection{LaTeX subsection}
-
-This is a dummy text to show you that you can also write in \textbf{bold} and in \textit{italics} with \LaTeX.
+Você também pode usar a fonte "Georgia". Nesse caso, substitua `font = "Lato"` por `font = "Georgia"`. Para usar outra fonte, simplesmente use a configuração "outra" e substitua os arquivos 'font_XXX.ttf' no diretório de trabalho por seus próprios arquivos. Observe que você deve nomear esses arquivos exatamente como os arquivos de fonte do modelo.
 
 
-## Cross-referencing within the report
+# Métodos
 
-To cross-references figures or tables you have to have a:
+## Sintaxe R Markdown vs sintaxe \LaTeX
 
-* **caption to your figure (or table)**:
-    * NOTE: figures without a caption will be included directly as images and will therefore not be a numbered figure
-* **labeled code chunk**: this provides the identifier for referencing the figure or table generated by the chunk.
+Como acontece com qualquer arquivo .Rmd, você pode gravar todo o relatório na sintaxe do R Markdown. No entanto, se você estiver familiarizado com o \LaTeX, também poderá misturar os dois:
 
-Cross-references within the text can then be made using the standard \LaTeX syntax `\@ref{type:label}`, where label is the chunk label and type is the environment being referenced (e.g. tab, fig, or eq). Examples are given in the sections below (e.g. in [R Markdown table]).
+### Subseção R Markdown
 
-To cross-reference sections simply put the section header in square brackets, e.g. [R output] via `[R output]`.
+Este é um texto fictício para mostrar como escrever em **negrito** e em *itálico*.
+
+\subsubsection{subseção LaTeX}
+
+Este é um texto fictício para mostrar que você também pode escrever em \textbf{negrito} e em \textit{itálico} com \LaTeX.
 
 
-## Mathematics
+## Referência cruzada dentro do relatório
 
-Use mathematics as usual with the dollar sign `$`; either in inline mode with one dollar sign, e.g. $E = mc^2$, or in display mode with two:
+Para fazer referências cruzadas de figuras ou tabelas, você deve ter uma:
+
+* **legenda(caption) da sua figura (ou tabela)**:
+     * NOTA: figuras sem legenda serão incluídas diretamente como imagens e, portanto, não serão uma figura numerada
+* **seção de código etiquetada(labeled code chunk)**: fornece o identificador para referenciar a figura ou tabela gerada pela seção (chunk).
+
+As referências cruzadas dentro do texto podem então ser feitas usando a sintaxe \LaTeX padrão `\@ref{type:rotulo}`, onde rotulo  é o rótulo do pedaço e type é o ambiente sendo referenciado (por exemplo, tab, fig ou eq). Exemplos são dados nas seções abaixo (por exemplo, em [Tabela em R Markdown]).
+
+Para seções de referência cruzada, basta colocar o cabeçalho da seção entre colchetes, por exemplo [Saída de código R] via `[Saída de código R]`.
+
+
+## Matemática
+
+Use a matemática normalmente com o cifrão `$`; no modo inline com um cifrão, por ex. $E = mc^2$, ou no modo de exibição com dois:
 
 $$E = mc^2$$
 
-Important to note: do not leave a space between the `$` and your mathematical notation.
+Observação importante: não deixe espaço entre o `$` e sua notação matemática.
 
-Alternatively, you can use \LaTeX for more control, e.g. for setting equation numbers that can be cross-referenced:
+Como alternativa, você pode usar \LaTeX para obter mais controle, por exemplo para definir números de equação que podem ter referência cruzada:
 
 \begin{equation} \label{eq:mean}
-  \bar{X} = \frac{\sum_{i=1}^n X_i}{n}
+   \bar{X} = \frac{\sum_{i=1}^n X_i}{n}
 \end{equation}
 
-You may refer to this equation using `\ref{eq:label}`, e.g., see Equation \ref{eq:mean}
+Você pode se referir a esta equação usando `\ref{eq:label}`, por exemplo, veja Equação \ref{eq:mean}
 
 
-<!-- This will start a new page (LaTeX code) -->
+<!-- Isso iniciará uma nova página (código LaTeX) -->
 \newpage
 
 
-# Results
+# Resultados
 
-## R output
+## Saída de código R
 
-R output is typically shown in the monospace font (here an example with the `mtcars` dataset in the subfolder `data/`): 
+A saída R normalmente é mostrada na fonte monoespaçada (aqui um exemplo com o conjunto de dados `mtcars` na subpasta `data/`):
 
 ```{r}
-# Import dataset from the data/ folder
+# Importe o conjunto de dados da pasta data/
 mtcars <- read.csv("data/mtcars.csv")
 summary(mtcars[,1:4])
 ```
 
 
-## Tables
+## Tabelas
 
-### R Markdown table
+### Tabela em R Markdown
 
-Table \ref{tab:rmd_tab} is a R Markdown table including a caption (note: the table number is automatically assigned) and label for cross-referencing:
+Tabela \ref{tab:rmd_tab} é uma tabela R Markdown incluindo uma legenda/título (nota: o número da tabela é atribuído automaticamente) e um rótulo para referência cruzada:
 
-| A            | New              | Table          |
+| Uma          | Nova             | Tabela         |
 |:-------------|:----------------:|---------------:|
 |left-aligned  |center-aligned    |right-aligned   |
 |$123          |$456              |$789            |
-|*italics*     |~~strikethrough~~ |**boldface**    |
-
-Table: Your Caption \label{tab:rmd_tab}
-
-### Tables generated with R
+|*itálico*     |~~escr. tachado~~ |**negrito **    |
 
 
-#### Using the *knitr* and  *kableExtra* packages
 
-Table \ref{tab:kable_tab} is an example when using `knitr::kable()` to generate the table and *kableExtra* functions to modify it:
+Tabela: Sua legenda/título \label{tab:rmd_tab}
+
+### Tabelas geradas com R
+
+
+#### Usando os pacotes *knitr* e *kableExtra*
+
+A tabela \ref{tab:kable_tab} é um exemplo ao usar `knitr::kable()` para gerar uma tabela e as funções do pacote *kableExtra* para modificá-la:
 
 ```{r}
 df <- mtcars[1:5, 1:6]
 kable(df, "latex", booktabs = TRUE,
-  caption = "A table produced with knitr and kableextra",
+  caption = "Uma tabela produzida com knitr e kableextra",
   label = "kable_tab") %>%
 kable_styling(position = "center", font_size = 9,
 latex_options = "striped") %>%
-add_header_above(c(" " = 1, "Group 1" = 2, "Group 2" = 2,
-"Group 3" = 1, "Group 4" = 1)) %>%
-add_header_above(c(" ", "Group 5" = 4, "Group 6" = 2), bold = T) %>%
-footnote(general = "Your comments go here.")
+add_header_above(c(" " = 1, "Grupo 1" = 2, "Grupo 2" = 2,
+"Grupo 3" = 1, "Grupo 4" = 1)) %>%
+add_header_above(c(" ", "Grupo 5" = 4, "Grupo 6" = 2), bold = T) %>%
+footnote(general = "Fonte: Seus comentários podem vir aqui.")
 ```
 
-#### The *xtable* package
+#### O pacote *xtable*
 
-Another useful package for tables for PDF output is [xtable](https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf). The following code will produce an example table if the *xtable* package is installed. Note that you need to add the chunk option `results = "asis"` inside `{r}` otherwise the PDF will contain the \LaTeX code of the table!
+Outro pacote útil para tabelas para saída em PDF é [xtable](https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf). O código a seguir produzirá uma tabela de exemplo se o pacote *xtable* estiver instalado. Observe que você precisa adicionar a opção do chunk `results = "asis"` dentro de `{r}` caso contrário o PDF conterá o código \LaTeX da tabela!
 
 ```{r, results = "asis", eval=ifelse(nzchar(system.file(package = "xtable")), TRUE, FALSE)}
-xt <- xtable(df, caption = "A table made with xtable", 
-  label = "tab:xtable_tab")
+xt <- xtable(df, caption = "Uma tabela feita com xtable",
+   label = "tab:xtable_tab")
 print(xt, comment = FALSE, caption.placement = "top", booktabs = TRUE)
 ```
 
 
-## Figures
+## Figuras
 
-```{r fig.cap = "Relationship between horsepower and fuel economy\\label{fig:base-ref}", out.width='100%'}
+```{r fig.cap = "Relação entre potência e economia de combustível\\label{fig:base-ref}", out.width='100%'}
 plot(mtcars$hp, mtcars$mpg,
-xlab = "Gross Horsepower",
-ylab = "Miles Per Gallon",
+xlab = "Potência Bruta",
+ylab = "Milhas por galão",
 pch = 19)
 abline(lm(mpg ~ hp, data = mtcars), col = "red")
 ```
 
-Figures are supported from R code and can be referenced (see Figure \ref{fig:base-ref}) by including the `\\label{}` tag in the `fig.cap` attribute of the R chunk: `fig.cap = "Relationship between horsepower and fuel economy\\label{fig:base-ref}"`. It is a quirky hack at the moment, see [here](https://github.com/yihui/knitr/issues/323).
+As figuras são suportadas pelo código R e podem ser referenciadas (consulte a Figura \ref{fig:base-ref}) incluindo a tag `\\label{}` no atributo `fig.cap` do bloco R: `fig. cap = "Relação entre potência e economia de combustível\\label{fig:base-ref}"`. É um hack peculiar no momento, veja [aqui](https://github.com/yihui/knitr/issues/323).
 
-Figure \ref{fig:boxplot-ref} shows a boxplot with just half the width and centered: 
+A figura \ref{fig:boxplot-ref} mostra um boxplot com apenas metade da largura e centralizado:
 
-```{r, fig.cap = "Fuel differences between transmission types (0 = automatic, 1 = manual)\\label{fig:boxplot-ref}", out.width='50%', fig.height = 6, fig.align='center'}
+```{r, fig.cap = "Diferenças de combustível entre tipos de transmissão (0 = automática, 1 = manual)\\label{fig:boxplot-ref}", out.width='50%', fig.height = 6, fig.align='center'}
 boxplot(mpg ~ am, mtcars)
 ```
 
 
-# Discussion
+# Discussão
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
-
-
-# Adding citations and bibliography
-
-Link a `.bib` document via the YAML header and the bibliography will be printed at the very end (as usual). The default bibliography style is provided in the `bib.bst` file (do not delete), which adopts the [SAGE Harvard](https://uk.sagepub.com/sites/default/files/sage_harvard_reference_style_0.pdf) reference style.
-
-References can be cited directly within the document using the R Markdown equivalent of the \LaTeX citation system `[@key]`, where key is the citation key in the first line of the entry in the .bib file. Example: [@Taylor1937]. To cite multiple entries, separate the keys by semicolons (e.g., [@Knupp1999; @Kamm2000].
-
-There is also the package [citr](https://github.com/crsh/citr), which I highly recommend: *citr* provides functions and an RStudio add-in to search a BibTeX-file to create and insert formatted Markdown citations into the current document. If you are using the reference manager [Zotero](https://www.zotero.org/) the add-in can access your reference database directly.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no mar takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no mar takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no mar takimata sanctus est Lorem ipsum dolor sit amet.
 
 
-## Software
+# Adicionando citações e bibliografia
 
-If you want to include a paragraph on the software used, here is some example text/code to get the current R and package versions. The code to create a separate bibliography file named 'packages.bib' with all package references has already been added at the beginning of this script (code chunk 'generate-package-refs').
+Vincule um documento `.bib` através do cabeçalho YAML e a bibliografia será impressa no final (como de costume). O estilo de bibliografia padrão é fornecido no arquivo `bib.bst` (não exclua), que adota o estilo de referência [SAGE Harvard](https://uk.sagepub.com/sites/default/files/sage_harvard_reference_style_0.pdf) .
 
-All analyses were performed using the statistical software R (version `r paste(R.Version()$major, R.Version()$minor, sep = ".")`) [@R-base]. This report, including tables and figures, was generated using the packages 'rmarkdown' (version `r packageVersion("rmarkdown")`) [@R-rmarkdown], 'knitr' (version `r packageVersion("knitr")`) [@R-knitr], 'kableExtra' (version `r packageVersion("kableExtra")`) [@R-kableExtra], 'xtable' (version `r packageVersion("xtable")`) [@R-xtable], and 'tidyverse' (version `r packageVersion("tidyverse")`) [@R-tidyverse.]
+As referências podem ser citadas diretamente no documento usando o R Markdown equivalente ao sistema de citação \LaTeX `[@key]`, onde key é a chave de citação na primeira linha da entrada no arquivo .bib. Exemplo: [@Taylor1937]. Para citar várias entradas, separe as chaves por ponto e vírgula (por exemplo, [@Knupp1999; @Kamm2000].
+
+Há também o pacote [citr](https://github.com/crsh/citr), que eu recomendo: *citr* fornece funções e um suplemento RStudio para pesquisar um arquivo BibTeX para criar e inserir Markdown formatado citações no documento atual. Se você estiver usando o gerenciador de referência [Zotero](https://www.zotero.org/), o suplemento pode acessar seu banco de dados de referência diretamente.
+
+
+## Programas
+
+Se você quiser incluir um parágrafo sobre o software usado, aqui está um exemplo de texto/código para obter a versão atual do R e as versões do pacote. O código para criar um arquivo de bibliografia separado chamado 'packages.bib' com todas as referências de pacotes já foi adicionado no início deste script (parte do código 'generate-package-refs').
+
+Todas as análises foram realizadas usando o software estatístico R (versão `r paste(R.Version()$major, R.Version()$minor, sep = ".")`) [@R-base]. Este relatório, incluindo tabelas e figuras, foi gerado usando os pacotes 'rmarkdown' (versão `r packageVersion("rmarkdown")`) [@R-rmarkdown], 'knitr' (versão `r packageVersion("knitr")`) [@R-knitr], 'kableExtra' (versão `r packageVersion("kableExtra")`) [@R-kableExtra], 'xtable' (versão `r packageVersion("xtable")`) [@R-xtable] , e 'tidyverse' (versão `r packageVersion("tidyverse")`) [@R-tidyverse].

@@ -25,6 +25,7 @@ Este pacote R fornece R Markdown e **modelos Quarto** prontos para uso para form
     - [Quarto: formato de saída HTML simples - `html`]
 - Relatórios em PDF
     - [R Markdown: relatório CGMIND em português (padrão) ou inglês - `pdf_report`]
+    - [R Markdown: relatório/boletim CGMIND em português (padrão) ou inglês - `pdf_periódico`]
     - [Quarto: Formato de saída para um relatório PDF em português (padrão) ou inglês - `pdf_report`]
 - folhas de dicas
     - [R Markdown: Formato de saída para uma folha de dicas simples (PDF) - `pdf_cheatsheet`]
@@ -250,7 +251,7 @@ knitr::include_graphics("vignettes/images/img_rmd_pdf_simple.png")
 
 
 
-### R Markdown: relatório CGMIND em português (padrão) ou inglês - `pdf_report`
+### R Markdown: relatório simples CGMIND em português (padrão) ou inglês - `pdf_report`
 
 → para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_report.pdf).
 
@@ -262,7 +263,7 @@ No cabeçalho YAML do modelo R Markdown, você pode personalizar facilmente os l
 ```
 ---
 title: "Título do documento"
-autor: "Nome(s) do autor"
+author: "Nome(s) do autor"
 data: \today
 font-size: 11pt
 german: false
@@ -284,6 +285,43 @@ Para mais detalhes sobre os argumentos disponíveis em `pdf_report` (além de `d
 ```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo pdf_report template"}
 knitr::include_graphics("vignettes/images/img_rmd_pdf_report.png")
 ```
+
+### R Markdown: boletim ou relatório periódico CGMIND em português (padrão) ou inglês - `pdf_periodic`
+
+→ para um arquivo de exemplo, veja também [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_periodic.pdf).
+
+Este modelo converte o arquivo R Markdown em um relatório baseado em PDF/LaTeX adequado para relatórios de projetos e tarefas de alunos. A função subjacente `pdf_periodic` é um wrapper de `rmarkdown::pdf_document` e baseado no pacote [rticles](https://github.com/rstudio/rticles) que
+fornece modelos para vários artigos de periódicos. O modelo Pandoc LaTeX e o layout do relatório são inspirados no pacote [ireports](https://github.com/INWTlab/ireports) do INWTlab.
+
+No cabeçalho YAML do modelo R Markdown, você pode personalizar facilmente os logotipos e a imagem da capa, o idioma, o estilo da bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção `include-after`:
+
+```
+---
+title: "Título do documento"
+author: "Nome(s) do autor"
+data: \today
+font-size: 11pt
+german: false
+bibliography: bibfile.bib
+bibliografiastyle: bibstyle.bst
+parâmetros:
+  capa: imagens/capa.png
+  title_logo_left: images/CGMIND_logo.png
+  title_logo_right: images/min_logo.png
+  logo_small: imagens/logo_icon.png
+resultado:
+  Formatos CGMIND::pdf_periodic:
+    df_print: kable
+---
+```
+
+Para mais detalhes sobre os argumentos disponíveis em `pdf_periodic` (além de `df_print` como mostrado aqui) veja seu arquivo de ajuda, bem como a ajuda para `rmarkdown::pdf_document`.
+
+```{r, echo=FALSE, fig.align='center', fig.alt="RMarkdown demo pdf_periodic template"}
+knitr::include_graphics("vignettes/images/img_rmd_pdf_periodic.png")
+```
+
+
 
 
 ### R Markdown: Formato de saída para uma folha de dicas simples (PDF) - `pdf_cheatsheet`
