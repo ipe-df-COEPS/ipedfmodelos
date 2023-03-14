@@ -251,14 +251,12 @@ $endfor$
   \begin{center}
     \begin{minipage}{13cm}
       \begin{center}
-          \begin{ragged-right}
-
-
-\makeatletter
-\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
-\begin{flushleft}
-  \textbf{\color{bluegray}\huge\@title}
-  \vskip 0.25em%
+      \raggedright
+      \makeatletter
+      \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+      \begin{flushleft}
+      \textbf{\color{bluegray}\huge\@title}
+      \vskip 0.25em%
   $if(subtitle)$
   \textbf{\color{bluegray}\large $subtitle$}
   $endif$
