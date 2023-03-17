@@ -1,3 +1,4 @@
+
 <!-- README.md é gerado a partir de README.Rmd. Edite esse arquivo -->
 
 # Formatos cgmind <img src="vignettes/images/cgmind_mv.png" align="right" width="90" height="100" />
@@ -5,54 +6,55 @@
 <!-- [![R-CMD-check](https://github.com/saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/ saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml) -->
 
 Este pacote R fornece R Markdown e **modelos Quarto** prontos para uso
-para formatos de saída HTML, PDF e Microsoft Word, que são usados ​​na
-Coordenação-Geral de Monitoramento de Indicadores da Secretaria de
-Atenção Especializada do Ministério da Saúde. O pacote visa incentivar a
+para formatos de saída HTML, PDF e Microsoft Word, que são usados na
+[Coordenação-Geral de Monitoramento de Indicadores da Secretaria de
+Atenção Especializada do Ministério da
+Saúde](https://github.com/cgmind-saes). O pacote visa incentivar a
 pesquisa reprodutível usando a sintaxe simples do Markdown enquanto
 incorpora todo o código R para produzir gráficos, tabelas e análises
 também. Incluídos no pacote estão modelos para
 
--   esboços/análises preliminares internas
-    -   [R Markdown: documento PDF simples em português (padrão) ou
-        inglês -
-        `pdf_simple`](#r-markdown-documento-pdf-simples-em-português-padrão-ou-inglês---pdf_simple)
-    -   [Quarto: Formato de saída para um documento PDF simples em
-        português (padrão) ou inglês -
-        `pdf_simple`](#quarto-formato-de-saída-para-um-documento-pdf-simples-em-português-padrão-ou-inglês---pdf_simple)
--   arquivos HTML do projeto
-    -   [R Markdown: documento HTML (design simples) -
-        `html_simple`](#r-markdown-documento-html-design-simples---html_simple)
-    -   [R Markdown: documento HTML (com design de bootstrap
-        ‘Material’) -
-        `html_material`](#r-markdown-documento-html-com-design-de-bootstrap-material---html_material)
-    -   [Quarto: formato de saída HTML simples -
-        `html`](#quarto-formato-de-saída-html-simples---html)
--   Relatórios em PDF
-    -   [R Markdown: relatório CGMIND em português (padrão) ou inglês -
-        `pdf_report`](#r-markdown-relatório-cgmind-em-português-padrão-ou-inglês---pdf_report)
-    -   [Quarto: Formato de saída para um relatório PDF em português
-        (padrão) ou inglês -
-        `pdf_report`](#quarto-formato-de-saída-para-um-relatório-pdf-em-português-padrão-ou-inglês---pdf_report)
--   folhas de dicas
-    -   [R Markdown: Formato de saída para uma folha de dicas simples
-        (PDF) -
-        `pdf_cheatsheet`](#r-markdown-formato-de-saída-para-uma-folha-de-dicas-simples-pdf---pdf_cheatsheet)
--   Documentos MS Word
-    -   [R Markdown: documento simples do Microsoft Word -
-        `word_doc`](#r-markdown-documento-simples-do-microsoft-word---word_doc)
-    -   [Quarto: formato de saída simples do Microsoft Word -
-        `word`](#quarto-formato-de-saída-simples-do-microsoft-word---word)
--   conversões de documentos R Markdown para Jupyter Notebooks
-    -   [R Markdown: formato de saída do Jupyter Notebook -
-        `rmd_to_jupyter`](#r-markdown-formato-de-saída-do-jupyter-notebook---rmd_to_jupyter)
+- esboços/análises preliminares internas
+  - [R Markdown: documento PDF simples em português (padrão) ou inglês -
+    `pdf_simple`](#r-markdown-documento-pdf-simples-em-português-padrão-ou-inglês---pdf_simple)
+  - [Quarto: Formato de saída para um documento PDF simples em português
+    (padrão) ou inglês -
+    `pdf_simple`](#quarto-formato-de-saída-para-um-documento-pdf-simples-em-português-padrão-ou-inglês---pdf_simple)
+- arquivos HTML do projeto
+  - [R Markdown: documento HTML (design simples) -
+    `html_simple`](#r-markdown-documento-html-design-simples---html_simple)
+  - [R Markdown: documento HTML (com design de bootstrap ‘Material’) -
+    `html_material`](#r-markdown-documento-html-com-design-de-bootstrap-material---html_material)
+  - [Quarto: formato de saída HTML simples -
+    `html`](#quarto-formato-de-saída-html-simples---html)
+- Relatórios em PDF
+  - \[R Markdown: relatório CGMIND em português (padrão) ou inglês -
+    `pdf_report`\]
+  - \[R Markdown: relatório/boletim CGMIND em português (padrão) ou
+    inglês - `pdf_periódico`\]
+  - [Quarto: Formato de saída para um relatório PDF em português
+    (padrão) ou inglês -
+    `pdf_report`](#quarto-formato-de-saída-para-um-relatório-pdf-em-português-padrão-ou-inglês---pdf_report)
+- folhas de dicas
+  - [R Markdown: Formato de saída para uma folha de dicas simples
+    (PDF) -
+    `pdf_cheatsheet`](#r-markdown-formato-de-saída-para-uma-folha-de-dicas-simples-pdf---pdf_cheatsheet)
+- Documentos MS Word
+  - [R Markdown: documento simples do Microsoft Word -
+    `word_doc`](#r-markdown-documento-simples-do-microsoft-word---word_doc)
+  - [Quarto: formato de saída simples do Microsoft Word -
+    `word`](#quarto-formato-de-saída-simples-do-microsoft-word---word)
+- conversões de documentos R Markdown para Jupyter Notebooks
+  - [R Markdown: formato de saída do Jupyter Notebook -
+    `rmd_to_jupyter`](#r-markdown-formato-de-saída-do-jupyter-notebook---rmd_to_jupyter)
 
-A fonte padrão para todos os modelos é ‘Helvetica’, mas a fonte pode ser
-substituída pelo estilo de fonte ‘Latto’ nos modelos PDF e Word.A
+A fonte padrão para todos os modelos é ‘Lato’, mas a fonte pode ser
+substituída pelo estilo de fonte ‘Helvetica’ nos modelos PDF e Word.A
 maioria dos modelos inclui ainda a identidade visual da CGMIND e adotou
 seu design, mas pode ser facilmente substituído no cabeçalho YAML e
 também o estilo pode ser modificado, por exemplo, adicionando sua
 própria folha de estilo CSS no cabeçalho YAML do modelo HTML. Portanto,
-esses modelos não se limitam a funcionários da CGMIND.
+esses modelos não se limitam a servidores ou colaboradores da CGMIND.
 
 Os templates foram desenvolvidos de uma adaptação livre daqueles
 existentes no pacote UHHformats. **Para ajudar a começar, todos os
@@ -62,8 +64,8 @@ cruzadas e incluir referências.
 
 **NOVO nesta versão**:
 
--   Primeira adaptação livre - primeira versão de do format word e
-    word_doc
+- Primeira adaptação livre - primeira versão de do format word e
+  word_doc
 
 ## Instalação
 
@@ -107,7 +109,7 @@ Depois de instalar o pacote, talvez seja necessário fechar e reabrir o
     selecione **Do modelo**. Você deve ser capaz de criar um novo
     documento a partir de um dos modelos de pacote:
 
-<img src="vignettes/images/img_create_document.png" alt="demo create document" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_create_document.png" alt="demo create document" width="400" style="display: block; margin: auto;" />
 
 2.  Escolha o diretório no qual deseja salvar seu arquivo e forneça um
     nome de arquivo (esse nome será usado tanto para o arquivo .Rmd
@@ -255,7 +257,7 @@ O modelo R Markdown atual tem no cabeçalho YAML:
     ---
     título: "Título"
     nome do autor"
-    data: "2022-09-19"
+    data: "2023-03-17"
     resultado:
       Formatos CGMIND::html_simple:
         destaque: kate
@@ -271,7 +273,7 @@ cabeçalho YAML além de `highlight`, `code_folding` e `number_sections`
 veja o arquivo de ajuda para `html_simple` bem como
 `bookdown::html_document2` ou `rmarkdown::html_document` .
 
-<img src="vignettes/images/img_rmd_html_simple.png" alt="RMarkdown demo html_simple template" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_html_simple.png" alt="RMarkdown demo html_simple template" width="1464" style="display: block; margin: auto;" />
 
 ### R Markdown: documento HTML (com design de bootstrap ‘Material’) - `html_material`
 
@@ -300,17 +302,17 @@ e `code_folding`, que são mostrados como exemplos no modelo R Markdown,
 consulte o arquivo de ajuda para `html_material` bem como
 `bookdown::html_document2` ou `rmarkdown::html_document`.
 
-<img src="vignettes/images/img_rmd_html_material.png" alt="RMarkdown demo html_material template" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_html_material.png" alt="RMarkdown demo html_material template" width="1464" style="display: block; margin: auto;" />
 
 #### Recursos adicionais disponíveis nestes modelos HTML:
 
 Alguns recursos extras foram adotados do
 [rmdformats](https://github.com/juba/rmdformats) pacote, ou seja
 
--   os conjuntos de guias são suportados como no modelo padrão feito com
-    `rmarkdown::html_document()`
--   ambos os modelos fornecem miniaturas automáticas para figuras com
-    exibição em lightbox
+- os conjuntos de guias são suportados como no modelo padrão feito com
+  `rmarkdown::html_document()`
+- ambos os modelos fornecem miniaturas automáticas para figuras com
+  exibição em lightbox
 
 ### R Markdown: Documento simples do Microsoft Word - `word_doc`
 
@@ -348,7 +350,7 @@ os rótulos da legenda da figura e das legendas da tabela. Se você quiser
 usar outros rótulos (por exemplo, ‘Abb.’ em vez de ‘Abbildung’),
 sinta-se à vontade para modificar o arquivo.
 
-<img src="vignettes/images/img_rmd_word_doc.png" alt="RMarkdown demo word_doc template" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_word_doc.png" alt="RMarkdown demo word_doc template" width="720" style="display: block; margin: auto;" />
 
 ### R Markdown: Documento PDF simples em português (padrão) ou inglês - `pdf_simple`
 
@@ -366,9 +368,9 @@ facilmente os logotipos e a imagem da capa, o idioma, o estilo da
 bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
 `include-after`:
 
-<img src="vignettes/images/img_rmd_pdf_simple.png" alt="RMarkdown demo pdf_simple template" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_pdf_simple.png" alt="RMarkdown demo pdf_simple template" width="3240" style="display: block; margin: auto;" />
 
-### R Markdown: relatório CGMIND em português (padrão) ou inglês - `pdf_report`
+### R Markdown: relatório simples CGMIND em português (padrão) ou inglês - `pdf_report`
 
 → para um arquivo de exemplo, veja também
 [aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_report.pdf).
@@ -388,11 +390,11 @@ bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
 
     ---
     title: "Título do documento"
-    autor: "Nome(s) do autor"
-    data: \hoje
-    tamanho da fonte: 11pt
-    alemão: false
-    bibliografia: bibfile.bib
+    author: "Nome(s) do autor"
+    data: \today
+    font-size: 11pt
+    german: false
+    bibliography: bibfile.bib
     bibliografiastyle: bibstyle.bst
     parâmetros:
       capa: imagens/capa.png
@@ -408,7 +410,50 @@ Para mais detalhes sobre os argumentos disponíveis em `pdf_report` (além
 de `df_print` como mostrado aqui) veja seu arquivo de ajuda, bem como a
 ajuda para `rmarkdown::pdf_document`.
 
-<img src="vignettes/images/img_rmd_pdf_report.png" alt="RMarkdown demo pdf_report template" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_pdf_report.png" alt="RMarkdown demo pdf_report template" width="701" style="display: block; margin: auto;" />
+
+### R Markdown: boletim ou relatório periódico CGMIND em português (padrão) ou inglês - `pdf_periodic`
+
+→ para um arquivo de exemplo, veja também
+[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_periodic.pdf).
+
+Este modelo converte o arquivo R Markdown em um relatório baseado em
+PDF/LaTeX adequado para relatórios de projetos e tarefas de alunos. A
+função subjacente `pdf_periodic` é um wrapper de
+`rmarkdown::pdf_document` e baseado no pacote
+[rticles](https://github.com/rstudio/rticles) que fornece modelos para
+vários artigos de periódicos. O modelo Pandoc LaTeX e o layout do
+relatório são inspirados no pacote
+[ireports](https://github.com/INWTlab/ireports) do INWTlab.
+
+No cabeçalho YAML do modelo R Markdown, você pode personalizar
+facilmente os logotipos e a imagem da capa, o idioma, o estilo da
+bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
+`include-after`:
+
+    ---
+    title: "Título do documento"
+    author: "Nome(s) do autor"
+    date: \today
+    font-size: 11pt
+    german: false
+    bibliography: bibfile.bib
+    bibliografiastyle: bibstyle.bst
+    parâmetros:
+      capa: imagens/capa.png
+      title_logo_left: images/CGMIND_logo.png
+      title_logo_right: images/min_logo.png
+      logo_small: imagens/logo_icon.png
+    resultado:
+      Formatos CGMIND::pdf_periodic:
+        df_print: kable
+    ---
+
+Para mais detalhes sobre os argumentos disponíveis em `pdf_periodic`
+(além de `df_print` como mostrado aqui) veja seu arquivo de ajuda, bem
+como a ajuda para `rmarkdown::pdf_document`.
+
+<img src="vignettes/images/img_rmd_pdf_periodic.png" alt="RMarkdown demo pdf_periodic template" width="714" style="display: block; margin: auto;" />
 
 ### R Markdown: Formato de saída para uma folha de dicas simples (PDF) - `pdf_cheatsheet`
 
@@ -429,7 +474,7 @@ ainda não consegui contornar o LaTeX em geral. No entanto, o arquivo de
 modelo .Rmd fornece vários exemplos sobre o layout e a sintaxe do LaTeX,
 o que esperamos que seja suficiente para o codificador inexperiente.
 
-<img src="vignettes/images/img_rmd_pdf_cheatsheet.png" alt="RMarkdown demo pdf_cheatsheet template" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_pdf_cheatsheet.png" alt="RMarkdown demo pdf_cheatsheet template" width="1094" style="display: block; margin: auto;" />
 
 ### R Markdown: formato de saída do Jupyter Notebook - `rmd_to_jupyter`
 
@@ -453,14 +498,13 @@ alguns pacotes como
 [notedown](https://github.com/aaren/notedown) (dos quais o primeiro
 depende) eu encontrei algumas questões:
 
--   você precisa ter o Python e o notedown instalados e configurados
-    corretamente antes de começar
--   ao abrir os notebooks no Jupyter Notebook localmente ou usando um
-    servidor remoto, não ou o kernel Phyton foi iniciado
-    automaticamente, pois todos os pedaços de código foram lidos como
-    código Python
--   ao escolher o kernel R para o notebook, o sinalizador `%%R` aparecia
-    em cada pedaço de código e precisava ser removido manualmente
+- você precisa ter o Python e o notedown instalados e configurados
+  corretamente antes de começar
+- ao abrir os notebooks no Jupyter Notebook localmente ou usando um
+  servidor remoto, não ou o kernel Phyton foi iniciado automaticamente,
+  pois todos os pedaços de código foram lidos como código Python
+- ao escolher o kernel R para o notebook, o sinalizador `%%R` aparecia
+  em cada pedaço de código e precisava ser removido manualmente
 
 Então, eventualmente, encontrei uma abordagem mais simples no pacote
 [rmd2jupyter](https://github.com/mkearney/rmd2jupyter) desenvolvi meu
@@ -486,16 +530,16 @@ foi salvo. E pronto!
 
 Ao abrir seu arquivo no Jupyter Notebook, observe que
 
--   se você usar uma instalação local do Jupyter Notebook, o programa
-    terá acesso automaticamente a todos os subdiretórios aos quais seu
-    arquivo está vinculado (por exemplo, a pasta `images/` ou qualquer
-    pasta `data/`)
--   se você usa o servidor Jupyter Notebook, você precisa enviar o
-    arquivo `.ipynb`, bem como todos os subdiretórios juntos como um
-    arquivo zip. Para descompactar, basta abrir um novo notebook R e
-    escrever na primeira célula: `unzip("zip_file_name.zip")`.
+- se você usar uma instalação local do Jupyter Notebook, o programa terá
+  acesso automaticamente a todos os subdiretórios aos quais seu arquivo
+  está vinculado (por exemplo, a pasta `images/` ou qualquer pasta
+  `data/`)
+- se você usa o servidor Jupyter Notebook, você precisa enviar o arquivo
+  `.ipynb`, bem como todos os subdiretórios juntos como um arquivo zip.
+  Para descompactar, basta abrir um novo notebook R e escrever na
+  primeira célula: `unzip("zip_file_name.zip")`.
 
-<img src="vignettes/images/img_rmd_to_jupyter.png" alt="RMarkdown demo rmd_to_jupyter template" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_to_jupyter.png" alt="RMarkdown demo rmd_to_jupyter template" width="600" style="display: block; margin: auto;" />
 
 ------------------------------------------------------------------------
 
@@ -533,7 +577,7 @@ adição de citações em Quarto. Se precisar de mais ajuda, acesse a
 documentação HTML da Quarto:
 [https://quarto.org/docs/output-formats/html-basics.html](https://quarto.org/docs/output-formats/html-%20basics.html).
 
-<img src="vignettes/images/img_quarto_html.png" alt="Modelo de demonstração do quarto para saída HTML" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_html.png" alt="Modelo de demonstração do quarto para saída HTML" width="2986" style="display: block; margin: auto;" />
 
 ### Quarto: Formato de saída simples do Microsoft Word - `word`
 
@@ -561,7 +605,7 @@ seja, o Normal.dot file), simplesmente forneça o caminho para o seu
 arquivo em `reference-doc:` ou comente/exclua esta linha,
 respectivamente.
 
-<img src="vignettes/images/img_quarto_word.png" alt="Modelo de demonstração do quarto para saída do MS Word" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_word.png" alt="Modelo de demonstração do quarto para saída do MS Word" width="1827" style="display: block; margin: auto;" />
 
 ### Quarto: Formato de saída para um documento PDF simples em português (padrão) ou inglês - `pdf_simple`
 
@@ -583,7 +627,7 @@ Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda
 adicional, acesse a documentação em PDF do Quarto:
 [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf-%20basics.html).
 
-<img src="vignettes/images/img_quarto_pdf_simple.png" alt="Modelo de demonstração do quarto para um documento PDF simples" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_pdf_simple.png" alt="Modelo de demonstração do quarto para um documento PDF simples" width="3628" style="display: block; margin: auto;" />
 
 ### Quarto: Formato de saída para um relatório PDF em português (padrão) ou inglês - `pdf_report`
 
@@ -608,33 +652,32 @@ Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda
 adicional, acesse a documentação em PDF do Quarto:
 [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf-%20basics.html).
 
-<img src="vignettes/images/img_quarto_pdf_report.png" alt="Modelo de demonstração do quarto para um relatório PDF" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_pdf_report.png" alt="Modelo de demonstração do quarto para um relatório PDF" width="3640" style="display: block; margin: auto;" />
 
 ------------------------------------------------------------------------
 
 ## Recursos úteis
 
--   R Markdown
-    -   A [documentação oficial do R
-        Markdown](https://rmarkdown.rstudio.com/lesson-1.html) do
-        RStudio
-    -   R Markdown [guia de
-        referência](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
-    -   R Markdown
-        [cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
-    -   O livro online [R Markdown: The Definitive
-        Guide](https://bookdown.org/yihui/rmarkdown/) de Yihui
-        Xie, J. J. Allaire e Garrett Grolemund
--   Quarto
-    -   O [guia oficial do Quarto](https://quarto.org/docs/guide/)
-    -   \[Galeria\] do Quarto(<https://quarto.org/docs/gallery/>)
--   LaTeX
-    -   A [ajuda e documentação oficial do
-        LaTeX](https://www.latex-project.org/help/documentation/)
-    -   A documentação [overleaf](https://www.overleaf.com/learn)
--   W3Schools Online Web Tutorial para
-    [HTML](https://www.w3schools.com/html/default.asp) e para
-    [CSS](https://www.w3schools.com/css/default.asp).
+- R Markdown
+  - A [documentação oficial do R
+    Markdown](https://rmarkdown.rstudio.com/lesson-1.html) do RStudio
+  - R Markdown [guia de
+    referência](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+  - R Markdown
+    [cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+  - O livro online [R Markdown: The Definitive
+    Guide](https://bookdown.org/yihui/rmarkdown/) de Yihui Xie, J. J.
+    Allaire e Garrett Grolemund
+- Quarto
+  - O [guia oficial do Quarto](https://quarto.org/docs/guide/)
+  - \[Galeria\] do Quarto(<https://quarto.org/docs/gallery/>)
+- LaTeX
+  - A [ajuda e documentação oficial do
+    LaTeX](https://www.latex-project.org/help/documentation/)
+  - A documentação [overleaf](https://www.overleaf.com/learn)
+- W3Schools Online Web Tutorial para
+  [HTML](https://www.w3schools.com/html/default.asp) e para
+  [CSS](https://www.w3schools.com/css/default.asp).
 
 ## Créditos
 
@@ -642,14 +685,14 @@ adicional, acesse a documentação em PDF do Quarto:
     Saskia Otto
 2.  Créditos derivados:
 
--   Pacote [rmdformats](https://github.com/juba/rmdformats) de Julien
-    Barnier
--   O pacote [rticles](https://github.com/rstudio/rticles)
--   Pacote [ireports](https://github.com/INWTlab/ireports) do INWTlab
--   Pacote [rmd2jupyter](https://github.com/mkearney/rmd2jupyter) de
-    Michael Kearney
--   \[modelo LaTeX para uma folha de dicas\] de Sarah Lang
-    (<https://www.overleaf.com/latex/templates/colourful-cheatsheet-template/qdsshbjktndd>)
--   Eli Holmes [coleção de modelos de páginas de título de
-    quarto](https://nmfs-opensci.github.io/quarto_titlepages/) para o
-    modelo Quarto mais recente para gerar saída de relatório em PDF.
+- Pacote [rmdformats](https://github.com/juba/rmdformats) de Julien
+  Barnier
+- O pacote [rticles](https://github.com/rstudio/rticles)
+- Pacote [ireports](https://github.com/INWTlab/ireports) do INWTlab
+- Pacote [rmd2jupyter](https://github.com/mkearney/rmd2jupyter) de
+  Michael Kearney
+- \[modelo LaTeX para uma folha de dicas\] de Sarah Lang
+  (<https://www.overleaf.com/latex/templates/colourful-cheatsheet-template/qdsshbjktndd>)
+- Eli Holmes [coleção de modelos de páginas de título de
+  quarto](https://nmfs-opensci.github.io/quarto_titlepages/) para o
+  modelo Quarto mais recente para gerar saída de relatório em PDF.
