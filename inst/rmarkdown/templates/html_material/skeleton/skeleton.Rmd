@@ -1,6 +1,6 @@
 ---
-title: "Title"
-author: "Name"
+title: "Título"
+author: "Autor"
 date: "`r Sys.Date()`"
 logo: "images/logo.svg"
 ### Comment or remove the following two lines if NO references are used

@@ -3,7 +3,7 @@ author: "created by Jane Doe"
 date: \today
 fontsize: 11pt
 params:
-  logo: images/uhh_logo.png
+  logo: images/ms_logo.png
   license: "CC-BY-SA"
   multicols: 3
   reduce_space_before_code: false
