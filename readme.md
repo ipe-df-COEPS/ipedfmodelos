@@ -1,6 +1,3 @@
-
-. 48569.+ output: github_document —
-
 <!-- README.md é gerado a partir de README.Rmd. Edite esse arquivo -->
 
 # Formatos cgmind <img src="vignettes/images/cgmind_mv.png" align="right" width="90" height="100" />
