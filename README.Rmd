@@ -299,7 +299,7 @@ No cabeçalho YAML do modelo R Markdown, você pode personalizar facilmente os l
 ---
 title: "Título do documento"
 author: "Nome(s) do autor"
-data: \today
+date: \today
 font-size: 11pt
 german: false
 bibliography: bibfile.bib
