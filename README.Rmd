@@ -174,12 +174,12 @@ O modelo R Markdown atual tem no cabeçalho YAML:
 
 ```
 ---
-título: "Título"
-nome do autor"
-data: "`r Sys.Date()`"
-resultado:
-  Formatos CGMIND::html_simple:
-    destaque: kate
+title: "Título"
+author: "nome do autor"
+date: "`r Sys.Date()`"
+output:
+  cgmindmodelos::html_simple:
+    highlight: kate
     code_folding: mostrar
     use_bookdown: true
     number_sections: false
@@ -263,18 +263,18 @@ No cabeçalho YAML do modelo R Markdown, você pode personalizar facilmente os l
 ---
 title: "Título do documento"
 author: "Nome(s) do autor"
-data: \today
+date: \today
 font-size: 11pt
 german: false
 bibliography: bibfile.bib
 bibliografiastyle: bibstyle.bst
-parâmetros:
-  capa: imagens/capa.png
+parameters:
+  cover: imagens/capa.png
   title_logo_left: images/CGMIND_logo.png
   title_logo_right: images/min_logo.png
   logo_small: imagens/logo_icon.png
-resultado:
-  Formatos CGMIND::pdf_report:
+output:
+  cgmindmodelos::pdf_report:
     df_print: kable
 ---
 ```
@@ -303,13 +303,13 @@ font-size: 11pt
 german: false
 bibliography: bibfile.bib
 bibliografiastyle: bibstyle.bst
-parâmetros:
-  capa: imagens/capa.png
+parameters:
+  cover: imagens/capa.png
   title_logo_left: images/CGMIND_logo.png
   title_logo_right: images/min_logo.png
   logo_small: imagens/logo_icon.png
-resultado:
-  Formatos CGMIND::pdf_periodic:
+output:
+  cgmindmodelos::pdf_periodic:
     df_print: kable
 ---
 ```
@@ -387,7 +387,7 @@ knitr::include_graphics("vignettes/images/img_rmd_to_jupyter.png")
 Este modelo converte o arquivo Quarto em um arquivo HTML simples com uma barra de navegação fixa no lado esquerdo, incluindo o logotipo CGMIND. Para criar um subdiretório incluindo o tipo de arquivo de modelo Quarto no console
 
 ```{r, eval=FALSE}
-Formatos CGMIND::create_quarto_doc(dirname = "choose_a_name", template = "html")
+cgmindmodelos::create_quarto_doc(dirname = "choose_a_name", template = "html")
 ```
 
 Muitas das opções Quarto para saída HTML estão listadas no cabeçalho YAML. Se você quiser saber mais sobre essas configurações, recomendo a [referência do formato HTML](https://quarto.org/docs/reference/formats/html.html) para obter uma lista completa das opções disponíveis.
@@ -408,7 +408,7 @@ knitr::include_graphics("vignettes/images/img_quarto_html.png")
 Semelhante ao modelo `word_doc` do R Markdown, este modelo Quarto usa um arquivo do Word 'CGMIND-template.docx', que é baseado no [arquivo de modelo padrão](https://www.kus.uni-hamburg.de/ themen/oeffentlichkeitsarbeit/corporate-design/vorlagen.html) da Universidade de Hamburgo (CGMIND), exceto para o tipo de fonte, que é por padrão 'Helvetica'. Você pode escolher a fonte no modelo digitando no console
 
 ```{r, eval=FALSE}
-Formatos CGMIND::create_qmd_doc(dirname = "escolha-um-nome",
+cgmindmodelos::create_qmd_doc(dirname = "escolha-um-nome",
   template = "palavra", font = "TheSansCGMIND")
 ```
 
@@ -426,7 +426,7 @@ knitr::include_graphics("vignettes/images/img_quarto_word.png")
 Este modelo converte o arquivo Quarto em um documento simples baseado em PDF/LaTeX com um design semelhante ao modelo R Markdown `pdf_simple`. Você pode escolher aqui entre dois tipos de fonte: 'Helvetica' (padrão) e a própria fonte da Universidade 'TheSansCGMIND'. Para criar um subdiretório incluindo o arquivo de modelo Quarto, digite no console
 
 ```{r, eval=FALSE}
-Formatos CGMIND::create_quarto_doc(dirname = "escolha-um-nome",
+cgmindmodelos::create_quarto_doc(dirname = "escolha-um-nome",
   template = "pdf_simple", font = "Helvetica")
 ```
 
@@ -444,7 +444,7 @@ knitr::include_graphics("vignettes/images/img_quarto_pdf_simple.png")
 Se você deseja ter mais um documento de estilo de relatório, escolha como modelo 'pdf_report':
 
 ```{r, eval=FALSE}
-Formatos CGMIND::create_quarto_doc(dirname = "escolha-um-nome",
+cgmindmodelos::create_quarto_doc(dirname = "escolha-um-nome",
   template = "pdf_report", font = "Helvetica")
 ```
 

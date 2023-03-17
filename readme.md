@@ -255,12 +255,12 @@ desenvolvido por Julien Barnier no pacote
 O modelo R Markdown atual tem no cabeçalho YAML:
 
     ---
-    título: "Título"
-    nome do autor"
-    data: "2023-03-17"
-    resultado:
-      Formatos CGMIND::html_simple:
-        destaque: kate
+    title: "Título"
+    author: "nome do autor"
+    date: "2023-03-17"
+    output:
+      cgmindmodelos::html_simple:
+        highlight: kate
         code_folding: mostrar
         use_bookdown: true
         number_sections: false
@@ -391,18 +391,18 @@ bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
     ---
     title: "Título do documento"
     author: "Nome(s) do autor"
-    data: \today
+    date: \today
     font-size: 11pt
     german: false
     bibliography: bibfile.bib
     bibliografiastyle: bibstyle.bst
-    parâmetros:
-      capa: imagens/capa.png
+    parameters:
+      cover: imagens/capa.png
       title_logo_left: images/CGMIND_logo.png
       title_logo_right: images/min_logo.png
       logo_small: imagens/logo_icon.png
-    resultado:
-      Formatos CGMIND::pdf_report:
+    output:
+      cgmindmodelos::pdf_report:
         df_print: kable
     ---
 
@@ -439,13 +439,13 @@ bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
     german: false
     bibliography: bibfile.bib
     bibliografiastyle: bibstyle.bst
-    parâmetros:
-      capa: imagens/capa.png
+    parameters:
+      cover: imagens/capa.png
       title_logo_left: images/CGMIND_logo.png
       title_logo_right: images/min_logo.png
       logo_small: imagens/logo_icon.png
-    resultado:
-      Formatos CGMIND::pdf_periodic:
+    output:
+      cgmindmodelos::pdf_periodic:
         df_print: kable
     ---
 
@@ -556,7 +556,7 @@ Para criar um subdiretório incluindo o tipo de arquivo de modelo Quarto
 no console
 
 ``` r
-Formatos CGMIND::create_quarto_doc(dirname = "choose_a_name", template = "html")
+cgmindmodelos::create_quarto_doc(dirname = "choose_a_name", template = "html")
 ```
 
 Muitas das opções Quarto para saída HTML estão listadas no cabeçalho
@@ -593,7 +593,7 @@ por padrão ‘Helvetica’. Você pode escolher a fonte no modelo digitando
 no console
 
 ``` r
-Formatos CGMIND::create_qmd_doc(dirname = "escolha-um-nome",
+cgmindmodelos::create_qmd_doc(dirname = "escolha-um-nome",
   template = "palavra", font = "TheSansCGMIND")
 ```
 
@@ -619,7 +619,7 @@ e a própria fonte da Universidade ‘TheSansCGMIND’. Para criar um
 subdiretório incluindo o arquivo de modelo Quarto, digite no console
 
 ``` r
-Formatos CGMIND::create_quarto_doc(dirname = "escolha-um-nome",
+cgmindmodelos::create_quarto_doc(dirname = "escolha-um-nome",
   template = "pdf_simple", font = "Helvetica")
 ```
 
@@ -638,7 +638,7 @@ Se você deseja ter mais um documento de estilo de relatório, escolha
 como modelo ‘pdf_report’:
 
 ``` r
-Formatos CGMIND::create_quarto_doc(dirname = "escolha-um-nome",
+cgmindmodelos::create_quarto_doc(dirname = "escolha-um-nome",
   template = "pdf_report", font = "Helvetica")
 ```
 
