@@ -79,7 +79,7 @@ Configure the YAML header including the following elements:
 - `execute`: Global options for customizing output from executed code are specified within this execute key.
 - `fig-align`: Global settings for figure positioning. For other settings see the [PDF format reference](https://quarto.org/docs/reference/formats/pdf.html).
 
-The default font for this template is 'Helvetica' but can be replaced with the University's own font style 'TheSansUHH'. If you are associated with the UHH you are allowed to use this font. You can choose the font in the template when running the function, e.g., `UHHformats::create_quarto_doc(dirname = "pdf_simple_doc", template = "pdf_simple", font = "TheSansUHH")`.
+The default font for this template is 'Lato' but can be replaced with the font 'Georgia'. You can choose the font in the template when running the function, e.g., `ipedfmodelos::create_quarto_doc(dirname = "pdf_simple_doc", template = "pdf_simple", font = "Georgia")`.
 
 
 ## Code blocks

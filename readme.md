@@ -1,15 +1,15 @@
 
 <!-- README.md é gerado a partir de README.Rmd. Edite esse arquivo -->
 
-# Formatos cgmind <img src="vignettes/images/cgmind_mv.png" align="right" width="90" height="100" />
+# Formatos ipedf <img src="vignettes/images/ipedf_mv.png" align="right" width="90" height="100" />
 
-<!-- [![R-CMD-check](https://github.com/saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/ saskiaotto/cgmindmodelos/actions/workflows/check-standard.yaml) -->
+<!-- [![R-CMD-check](https://github.com/saskiaotto/ipedfmodelos/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/ saskiaotto/ipedfmodelos/actions/workflows/check-standard.yaml) -->
 
 Este pacote R fornece R Markdown e **modelos Quarto** prontos para uso
 para formatos de saída HTML, PDF e Microsoft Word, que são usados na
-[Coordenação-Geral de Monitoramento de Indicadores da Secretaria de
-Atenção Especializada do Ministério da
-Saúde](https://github.com/cgmind-saes). O pacote visa incentivar a
+[Coordenação de Estudos e Pesquisas Socioeconômicas do Instituto de
+Pesquisa e Estatística do Distrito
+Federal](https://github.com/ipe-df-coeps). O pacote visa incentivar a
 pesquisa reprodutível usando a sintaxe simples do Markdown enquanto
 incorpora todo o código R para produzir gráficos, tabelas e análises
 também. Incluídos no pacote estão modelos para
@@ -28,9 +28,9 @@ também. Incluídos no pacote estão modelos para
   - [Quarto: formato de saída HTML simples -
     `html`](#quarto-formato-de-saída-html-simples---html)
 - Relatórios em PDF
-  - \[R Markdown: relatório CGMIND em português (padrão) ou inglês -
+  - \[R Markdown: relatório ipedf em português (padrão) ou inglês -
     `pdf_report`\]
-  - \[R Markdown: relatório/boletim CGMIND em português (padrão) ou
+  - \[R Markdown: relatório/boletim ipedf em português (padrão) ou
     inglês - `pdf_periódico`\]
   - [Quarto: Formato de saída para um relatório PDF em português
     (padrão) ou inglês -
@@ -49,12 +49,12 @@ também. Incluídos no pacote estão modelos para
     `rmd_to_jupyter`](#r-markdown-formato-de-saída-do-jupyter-notebook---rmd_to_jupyter)
 
 A fonte padrão para todos os modelos é ‘Lato’, mas a fonte pode ser
-substituída pelo estilo de fonte ‘Helvetica’ nos modelos PDF e Word.A
-maioria dos modelos inclui ainda a identidade visual da CGMIND e adotou
+substituída pelo estilo de fonte ‘Georgia’ nos modelos PDF e Word.A
+maioria dos modelos inclui ainda a identidade visual da ipedf e adotou
 seu design, mas pode ser facilmente substituído no cabeçalho YAML e
 também o estilo pode ser modificado, por exemplo, adicionando sua
 própria folha de estilo CSS no cabeçalho YAML do modelo HTML. Portanto,
-esses modelos não se limitam a servidores ou colaboradores da CGMIND.
+esses modelos não se limitam a servidores ou colaboradores da ipedf.
 
 Os templates foram desenvolvidos de uma adaptação livre daqueles
 existentes no pacote UHHformats. **Para ajudar a começar, todos os
@@ -73,7 +73,7 @@ Instale a versão de desenvolvimento do GitHub usando o pacote *remotes*:
 
 ``` r
 if (!require("remotes")) install.packages("remotes")
-remotes::install_github("rodrigoesborges/cgmindmodelos", build_vignettes = TRUE)
+remotes::install_github("rodrigoesborges/ipedfmodelos", build_vignettes = TRUE)
 ```
 
 Certifique-se de que você também tenha as versões mais recentes dos
@@ -103,13 +103,13 @@ if (!require("quarto")) install.packages("quarto")
 #### Criando um novo documento e renderizando-o no R Studio
 
 Depois de instalar o pacote, talvez seja necessário fechar e reabrir o
-​​RStudio para ver os `cgmindmodelos` modelos listados.
+​​RStudio para ver os `ipedfmodelos` modelos listados.
 
 1.  Escolha **Arquivo** \> **Novo arquivo** \> **R Markdown** e
     selecione **Do modelo**. Você deve ser capaz de criar um novo
     documento a partir de um dos modelos de pacote:
 
-<img src="vignettes/images/img_create_document.png" alt="demo create document" width="400" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_create_document.png" alt="demo create document" style="display: block; margin: auto;" />
 
 2.  Escolha o diretório no qual deseja salvar seu arquivo e forneça um
     nome de arquivo (esse nome será usado tanto para o arquivo .Rmd
@@ -130,7 +130,7 @@ função interna `create_rmd_doc()`, que é adotado do pacote
 Utilize, por exemplo,
 
 ``` r
-cgmindmodelos::create_rmd_doc(dirname = "new_doc", template = "pdf_report")
+ipedfmodelos::create_rmd_doc(dirname = "new_doc", template = "pdf_report")
 ```
 
 para gerar uma saída PDF semelhante a um relatório.
@@ -138,7 +138,7 @@ para gerar uma saída PDF semelhante a um relatório.
 Alternativamente, use
 
 ``` r
-rmarkdown::draft("new_doc.Rmd", template = "html_simple", package = "cgmindmodelos")
+rmarkdown::draft("new_doc.Rmd", template = "html_simple", package = "ipedfmodelos")
 ```
 
 Essas funções criarão automaticamente o subdiretório e colocarão o
@@ -168,15 +168,15 @@ que isso mude, você pode acessar esses templates com a função
 nome do subdiretório (e arquivo .qmd), `template` para os tipos de saída
 (escolha entre ‘html’, ‘pdf_simple’, ‘pdf_report’ ou ‘word’) e `font`
 para o tipo de fonte. Se o formato de saída for PDF ou Word, você pode
-escolher entre a fonte ‘Helvetica’ e ‘TheSansCGMIND’. A função irá
-copiar os arquivos .qmd e os arquivos e pastas associados para este novo
+escolher entre a fonte ‘Georgia’ e ‘TheSansipedf’. A função irá copiar
+os arquivos .qmd e os arquivos e pastas associados para este novo
 subdiretório
 
 Utilize, por exemplo,
 
 ``` r
-cgmindmodelos::create_qmd_doc(dirname = "my_html_doc", template = "html")
-cgmindmodelos::create_qmd_doc(dirname = "my_pdf_doc", template = "pdf_simple", font = "TheSansCGMIND")
+ipedfmodelos::create_qmd_doc(dirname = "my_html_doc", template = "html")
+ipedfmodelos::create_qmd_doc(dirname = "my_pdf_doc", template = "pdf_simple", font = "TheSansipedf")
 ```
 
 gerar uma página HTML com a fonte padrão do navegador ou um documento
@@ -236,7 +236,7 @@ Se você quiser saber mais sobre o LaTeX, um bom começo é o tutorial
 ### R Markdown: documento HTML (design simples) - `html_simple`
 
 → para um arquivo de exemplo veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_html_simple.html).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_html_simple.html).
 
 Este modelo converte o arquivo R Markdown em um arquivo HTML simples com
 uma tabela de conteúdo fixa no canto superior direito e um botão de
@@ -257,9 +257,9 @@ O modelo R Markdown atual tem no cabeçalho YAML:
     ---
     title: "Título"
     author: "nome do autor"
-    date: "2023-03-17"
+    date: "2023-05-30"
     output:
-      cgmindmodelos::html_simple:
+      ipedfmodelos::html_simple:
         highlight: kate
         code_folding: mostrar
         use_bookdown: true
@@ -273,12 +273,12 @@ cabeçalho YAML além de `highlight`, `code_folding` e `number_sections`
 veja o arquivo de ajuda para `html_simple` bem como
 `bookdown::html_document2` ou `rmarkdown::html_document` .
 
-<img src="vignettes/images/img_rmd_html_simple.png" alt="RMarkdown demo html_simple template" width="1464" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_html_simple.png" alt="RMarkdown demo html_simple template" style="display: block; margin: auto;" />
 
 ### R Markdown: documento HTML (com design de bootstrap ‘Material’) - `html_material`
 
 → para um arquivo de exemplo veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_html_material.html).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_html_material.html).
 
 Este modelo converte o arquivo R Markdown em um arquivo de saída HTML
 que possui uma barra de navegação à esquerda e na qual as diferentes
@@ -291,7 +291,7 @@ Também neste modelo, o código HTML, JavaScript, CSS e R foram
 originalmente desenvolvidos por Julien Barnier no pacote
 [rmdformats](https://github.com/juba/rmdformats) e apenas ligeiramente
 modificados aqui para adaptá-lo ao *Programa de Ciência de Dados em
-Biologia* do CGMIND.
+Biologia* do ipedf.
 
 Semelhante a `html_simple`, a função subjacente chama internamente
 `rmarkdown::html_document` ou (padrão) `bookdown::html_document2`. Mas
@@ -302,7 +302,7 @@ e `code_folding`, que são mostrados como exemplos no modelo R Markdown,
 consulte o arquivo de ajuda para `html_material` bem como
 `bookdown::html_document2` ou `rmarkdown::html_document`.
 
-<img src="vignettes/images/img_rmd_html_material.png" alt="RMarkdown demo html_material template" width="1464" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_html_material.png" alt="RMarkdown demo html_material template" style="display: block; margin: auto;" />
 
 #### Recursos adicionais disponíveis nestes modelos HTML:
 
@@ -317,7 +317,7 @@ Alguns recursos extras foram adotados do
 ### R Markdown: Documento simples do Microsoft Word - `word_doc`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_word_doc.docx).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_word_doc.docx).
 
 Este modelo converte o arquivo R Markdown em um documento do Microsoft
 Word, adequado para tarefas de alunos ou relatórios de projetos. A
@@ -329,12 +329,12 @@ automaticamente de inglês para alemão (ou qualquer outro idioma).
 No cabeçalho YAML do modelo R Markdown, você pode personalizar
 facilmente o idioma, a fonte, o estilo de bibliografia ou incluir um
 índice e o título do mesmo. Por padrão, o `word_doc` usa um arquivo de
-modelo ‘CGMIND-template’, que é baseado no [arquivo de modelo
+modelo ‘ipedf-template’, que é baseado no [arquivo de modelo
 padrão](https://www.kus.uni-hamburg.de/themen/oeffentlichkeitsarbeit/corporate-design/vorlagen.%20html)
-da Universidade de Hamburgo (CGMIND), exceto pelo tipo de fonte, que é
-definido como ‘Helvetica’. Se você estiver associado à CGMIND, também
-poderá usar a fonte própria da Universidade “TheSansCGMIND”. Nesse caso,
-substitua *font = “Helvetica”* por *font = “TheSansCGMIND”*.
+da Universidade de Hamburgo (ipedf), exceto pelo tipo de fonte, que é
+definido como ‘Georgia’. Se você estiver associado à ipedf, também
+poderá usar a fonte própria da Universidade “TheSansipedf”. Nesse caso,
+substitua *font = “Georgia”* por *font = “TheSansipedf”*.
 
 Se você quiser usar seu próprio modelo ou o modelo padrão do Word (ou
 seja, o arquivo Normal.dot), simplesmente forneça o caminho para seu
@@ -350,12 +350,12 @@ os rótulos da legenda da figura e das legendas da tabela. Se você quiser
 usar outros rótulos (por exemplo, ‘Abb.’ em vez de ‘Abbildung’),
 sinta-se à vontade para modificar o arquivo.
 
-<img src="vignettes/images/img_rmd_word_doc.png" alt="RMarkdown demo word_doc template" width="720" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_word_doc.png" alt="RMarkdown demo word_doc template" style="display: block; margin: auto;" />
 
 ### R Markdown: Documento PDF simples em português (padrão) ou inglês - `pdf_simple`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_simple.pdf).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_pdf_simple.pdf).
 
 Este modelo converte o arquivo R Markdown em um documento simples
 baseado em PDF/LaTeX estruturado como um artigo, que é adequado para
@@ -368,12 +368,12 @@ facilmente os logotipos e a imagem da capa, o idioma, o estilo da
 bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
 `include-after`:
 
-<img src="vignettes/images/img_rmd_pdf_simple.png" alt="RMarkdown demo pdf_simple template" width="3240" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_pdf_simple.png" alt="RMarkdown demo pdf_simple template" style="display: block; margin: auto;" />
 
-### R Markdown: relatório simples CGMIND em português (padrão) ou inglês - `pdf_report`
+### R Markdown: relatório simples ipedf em português (padrão) ou inglês - `pdf_report`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_report.pdf).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_pdf_report.pdf).
 
 Este modelo converte o arquivo R Markdown em um relatório baseado em
 PDF/LaTeX adequado para relatórios de projetos e tarefas de alunos. A
@@ -398,11 +398,11 @@ bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
     bibliografiastyle: bibstyle.bst
     parameters:
       cover: imagens/capa.png
-      title_logo_left: images/CGMIND_logo.png
+      title_logo_left: images/ipedf_logo.png
       title_logo_right: images/min_logo.png
       logo_small: imagens/logo_icon.png
     output:
-      cgmindmodelos::pdf_report:
+      ipedfmodelos::pdf_report:
         df_print: kable
     ---
 
@@ -410,12 +410,12 @@ Para mais detalhes sobre os argumentos disponíveis em `pdf_report` (além
 de `df_print` como mostrado aqui) veja seu arquivo de ajuda, bem como a
 ajuda para `rmarkdown::pdf_document`.
 
-<img src="vignettes/images/img_rmd_pdf_report.png" alt="RMarkdown demo pdf_report template" width="701" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_pdf_report.png" alt="RMarkdown demo pdf_report template" style="display: block; margin: auto;" />
 
-### R Markdown: boletim ou relatório periódico CGMIND em português (padrão) ou inglês - `pdf_periodic`
+### R Markdown: boletim ou relatório periódico ipedf em português (padrão) ou inglês - `pdf_periodic`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_periodic.pdf).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_pdf_periodic.pdf).
 
 Este modelo converte o arquivo R Markdown em um relatório baseado em
 PDF/LaTeX adequado para relatórios de projetos e tarefas de alunos. A
@@ -441,11 +441,11 @@ bibliografia ou até mesmo adicionar seu próprio estilo LaTeX com a opção
     bibliografiastyle: bibstyle.bst
     parameters:
       cover: imagens/capa.png
-      title_logo_left: images/CGMIND_logo.png
+      title_logo_left: images/ipedf_logo.png
       title_logo_right: images/min_logo.png
       logo_small: imagens/logo_icon.png
     output:
-      cgmindmodelos::pdf_periodic:
+      ipedfmodelos::pdf_periodic:
         df_print: kable
     ---
 
@@ -453,12 +453,12 @@ Para mais detalhes sobre os argumentos disponíveis em `pdf_periodic`
 (além de `df_print` como mostrado aqui) veja seu arquivo de ajuda, bem
 como a ajuda para `rmarkdown::pdf_document`.
 
-<img src="vignettes/images/img_rmd_pdf_periodic.png" alt="RMarkdown demo pdf_periodic template" width="714" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_pdf_periodic.png" alt="RMarkdown demo pdf_periodic template" style="display: block; margin: auto;" />
 
 ### R Markdown: Formato de saída para uma folha de dicas simples (PDF) - `pdf_cheatsheet`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_pdf_cheatsheet.pdf).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_pdf_cheatsheet.pdf).
 
 Modelo para criar uma folha de dicas simples. O formato de saída PDF
 será de tamanho A4 e horizontal. Você pode definir se a folha de dicas
@@ -474,12 +474,12 @@ ainda não consegui contornar o LaTeX em geral. No entanto, o arquivo de
 modelo .Rmd fornece vários exemplos sobre o layout e a sintaxe do LaTeX,
 o que esperamos que seja suficiente para o codificador inexperiente.
 
-<img src="vignettes/images/img_rmd_pdf_cheatsheet.png" alt="RMarkdown demo pdf_cheatsheet template" width="1094" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_pdf_cheatsheet.png" alt="RMarkdown demo pdf_cheatsheet template" style="display: block; margin: auto;" />
 
 ### R Markdown: formato de saída do Jupyter Notebook - `rmd_to_jupyter`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_rmd_to_jupyter.ipynb).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_rmd_to_jupyter.ipynb).
 
 Embora eu seja um forte defensor do R Studio e do servidor R Studio como
 IDE para R, há momentos em que \[Juypter
@@ -516,7 +516,7 @@ código R Markdown diretamente em uma string JSON embelezada usando
 A única coisa que você precisa no cabeçalho YAML é, portanto:
 
     ---
-    tricotar: cgmindmodelos::rmd_to_jupyter
+    tricotar: ipedfmodelos::rmd_to_jupyter
     ---
 
 Como tudo do cabeçalho YAML será cortado ao converter o código, qualquer
@@ -539,7 +539,7 @@ Ao abrir seu arquivo no Jupyter Notebook, observe que
   Para descompactar, basta abrir um novo notebook R e escrever na
   primeira célula: `unzip("zip_file_name.zip")`.
 
-<img src="vignettes/images/img_rmd_to_jupyter.png" alt="RMarkdown demo rmd_to_jupyter template" width="600" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_rmd_to_jupyter.png" alt="RMarkdown demo rmd_to_jupyter template" style="display: block; margin: auto;" />
 
 ------------------------------------------------------------------------
 
@@ -548,15 +548,15 @@ Ao abrir seu arquivo no Jupyter Notebook, observe que
 ### Quarto: Formato de saída HTML simples - `html`
 
 → para um arquivo de exemplo veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_html.html).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_quarto_html.html).
 
 Este modelo converte o arquivo Quarto em um arquivo HTML simples com uma
-barra de navegação fixa no lado esquerdo, incluindo o logotipo CGMIND.
+barra de navegação fixa no lado esquerdo, incluindo o logotipo ipedf.
 Para criar um subdiretório incluindo o tipo de arquivo de modelo Quarto
 no console
 
 ``` r
-cgmindmodelos::create_quarto_doc(dirname = "choose_a_name", template = "html")
+ipedfmodelos::create_quarto_doc(dirname = "choose_a_name", template = "html")
 ```
 
 Muitas das opções Quarto para saída HTML estão listadas no cabeçalho
@@ -577,24 +577,24 @@ adição de citações em Quarto. Se precisar de mais ajuda, acesse a
 documentação HTML da Quarto:
 [https://quarto.org/docs/output-formats/html-basics.html](https://quarto.org/docs/output-formats/html-%20basics.html).
 
-<img src="vignettes/images/img_quarto_html.png" alt="Modelo de demonstração do quarto para saída HTML" width="2986" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_html.png" alt="Modelo de demonstração do quarto para saída HTML" style="display: block; margin: auto;" />
 
 ### Quarto: Formato de saída simples do Microsoft Word - `word`
 
 → para um arquivo de exemplo veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_word.docx).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_quarto_word.docx).
 
 Semelhante ao modelo `word_doc` do R Markdown, este modelo Quarto usa um
-arquivo do Word ‘CGMIND-template.docx’, que é baseado no [arquivo de
+arquivo do Word ‘ipedf-template.docx’, que é baseado no [arquivo de
 modelo
 padrão](https://www.kus.uni-hamburg.de/%20themen/oeffentlichkeitsarbeit/corporate-design/vorlagen.html)
-da Universidade de Hamburgo (CGMIND), exceto para o tipo de fonte, que é
-por padrão ‘Helvetica’. Você pode escolher a fonte no modelo digitando
+da Universidade de Hamburgo (ipedf), exceto para o tipo de fonte, que é
+por padrão ‘Georgia’. Você pode escolher a fonte no modelo digitando
 no console
 
 ``` r
-cgmindmodelos::create_qmd_doc(dirname = "escolha-um-nome",
-  template = "palavra", font = "TheSansCGMIND")
+ipedfmodelos::create_qmd_doc(dirname = "escolha-um-nome",
+  template = "palavra", font = "TheSansipedf")
 ```
 
 Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda
@@ -605,41 +605,41 @@ seja, o Normal.dot file), simplesmente forneça o caminho para o seu
 arquivo em `reference-doc:` ou comente/exclua esta linha,
 respectivamente.
 
-<img src="vignettes/images/img_quarto_word.png" alt="Modelo de demonstração do quarto para saída do MS Word" width="1827" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_word.png" alt="Modelo de demonstração do quarto para saída do MS Word" style="display: block; margin: auto;" />
 
 ### Quarto: Formato de saída para um documento PDF simples em português (padrão) ou inglês - `pdf_simple`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_pdf_simple.pdf).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_quarto_pdf_simple.pdf).
 
 Este modelo converte o arquivo Quarto em um documento simples baseado em
 PDF/LaTeX com um design semelhante ao modelo R Markdown `pdf_simple`.
-Você pode escolher aqui entre dois tipos de fonte: ‘Helvetica’ (padrão)
-e a própria fonte da Universidade ‘TheSansCGMIND’. Para criar um
+Você pode escolher aqui entre dois tipos de fonte: ‘Georgia’ (padrão)
+e a própria fonte da Universidade ‘TheSansipedf’. Para criar um
 subdiretório incluindo o arquivo de modelo Quarto, digite no console
 
 ``` r
-cgmindmodelos::create_quarto_doc(dirname = "escolha-um-nome",
-  template = "pdf_simple", font = "Helvetica")
+ipedfmodelos::create_quarto_doc(dirname = "escolha-um-nome",
+  template = "pdf_simple", font = "Georgia")
 ```
 
 Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda
 adicional, acesse a documentação em PDF do Quarto:
 [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf-%20basics.html).
 
-<img src="vignettes/images/img_quarto_pdf_simple.png" alt="Modelo de demonstração do quarto para um documento PDF simples" width="3628" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_pdf_simple.png" alt="Modelo de demonstração do quarto para um documento PDF simples" style="display: block; margin: auto;" />
 
 ### Quarto: Formato de saída para um relatório PDF em português (padrão) ou inglês - `pdf_report`
 
 → para um arquivo de exemplo, veja também
-[aqui](https://github.com/rodrigoesborges/cgmindmodelos/blob/master/resources/examples/demo_quarto_pdf_report.pdf).
+[aqui](https://github.com/rodrigoesborges/ipedfmodelos/blob/master/resources/examples/demo_quarto_pdf_report.pdf).
 
 Se você deseja ter mais um documento de estilo de relatório, escolha
 como modelo ‘pdf_report’:
 
 ``` r
-cgmindmodelos::create_quarto_doc(dirname = "escolha-um-nome",
-  template = "pdf_report", font = "Helvetica")
+ipedfmodelos::create_quarto_doc(dirname = "escolha-um-nome",
+  template = "pdf_report", font = "Georgia")
 ```
 
 O estilo deste modelo é semelhante ao modelo do R Markdown `pdf_report`,
@@ -652,7 +652,7 @@ Mais informações são fornecidas no arquivo .qmd. Se precisar de ajuda
 adicional, acesse a documentação em PDF do Quarto:
 [https://quarto.org/docs/output-formats/pdf-basics.html](https://quarto.org/docs/output-formats/pdf-%20basics.html).
 
-<img src="vignettes/images/img_quarto_pdf_report.png" alt="Modelo de demonstração do quarto para um relatório PDF" width="3640" style="display: block; margin: auto;" />
+<img src="vignettes/images/img_quarto_pdf_report.png" alt="Modelo de demonstração do quarto para um relatório PDF" style="display: block; margin: auto;" />
 
 ------------------------------------------------------------------------
 
@@ -681,7 +681,7 @@ adicional, acesse a documentação em PDF do Quarto:
 
 ## Créditos
 
-1.  Pacote [UHHformats](https://github.com/saskiaotto/cgmindmodelos) de
+1.  Pacote [UHHformats](https://github.com/saskiaotto/UHHFormats) de
     Saskia Otto
 2.  Créditos derivados:
 

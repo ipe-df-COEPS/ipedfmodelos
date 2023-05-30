@@ -3,7 +3,7 @@ author: "created by Jane Doe"
 date: \today
 fontsize: 11pt
 params:
-  logo: images/ms_logo.png
+  logo: images/ipedf_logo.png
   license: "CC-BY-SA"
   multicols: 3
   reduce_space_before_code: false
@@ -17,9 +17,9 @@ header-includes:
   # if you include a logo, don't remove this line!!
   - \newcommand{\logo}{`r gsub("_", "\\_", params$logo)`}
 output:
-  UHHformats::pdf_cheatsheet:
+  ipedfmodelos::pdf_cheatsheet:
     highlight: "kate"
-    font: "Helvetica" # alternative: "TheSansUHH"
+    font: "Lato" # alternative: "Georgia"
 ---
 
 ```{r setup, include = FALSE}

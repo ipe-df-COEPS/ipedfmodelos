@@ -1,14 +1,14 @@
-Package: cgmindmodelos
+Package: ipedfmodelos
 Type: Package
-Title: Modelos para formatos de saída HTML e PDF/LaTeX projetados para CGMIND/SAES/<S
-Version: 0.1.0.20230315
-Date: 2023-03-15
-Authors@R: c(person("Rodrigo", "Borges", email="rodrigo.emmanuel@saude.gov.br",
+Title: Modelos para formatos de saída HTML e PDF/LaTeX projetados para IPE-DF/<S
+Version: 0.0.1.20230330
+Date: 2023-03-30
+Authors@R: c(person("Rodrigo", "Borges", email="rodrigo.borges@ipe.df.gov.br",
     role=c("aut","cre")))
-Maintainer: Rodrigo Borges <rodrigo.emmanuel@saude.gov.br>
+Maintainer: Rodrigo Borges <rodrigo.borges@ipe.df.gov.br>
 Description: Modelos R Markdown e Quarto para documentos HTML, PDF e MS Word, que são usados
-     dentro da Coordenação-Geral de Monitoramento de Indicadores da Atenção Especializada à Saúde,
-     da Secretaria de Atenção Especializada à Saúde do Ministério da Saúde do Brasil.O pacote visa incentivar
+     dentro da Coordenação de Estudos e Pesquisas Socioeconômicas do Instituto de 
+     Pesquisa e Estatística do Distrito Federal.O pacote visa incentivar
      pesquisa reproduzível usando sintaxe Markdown simples enquanto incorpora todo o código R para
      produzir peças e análises também. Fortemente baseado no trabalho realizado por Saskia Otto no pacote UHHformats.
 License: CC BY 4.0

@@ -1,7 +1,7 @@
-# cgmindmodelos 0.0.2
+# ipedfmodelos 0.0.1
 
-* primeiras adaptações do pacote fonte UHHformats - melhorias e ajustes modelo padrão para Lato
+* primeiras adaptações com identidade visual de IPE-DF
 
-# cgmindmodelos 0.0.1
+# ipedfmodelos 0.0.0
 
-* primeiras adaptações do pacote fonte UHHformats
+* fork de cgmind-modelos (orig UHHformats)

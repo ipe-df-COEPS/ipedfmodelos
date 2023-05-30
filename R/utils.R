@@ -9,12 +9,12 @@ find_resource <- function(template, file, type = "rmarkdown") {
   type <- match.arg(type, types)
   if (type == "rmarkdown") {
     res <- system.file(
-      "rmarkdown", "templates", template, "resources", file, package = "cgmindmodelos"
+      "rmarkdown", "templates", template, "resources", file, package = "ipedfmodelos"
     )
   }
   if (type == "quarto") {
     res <- system.file(
-      "quarto", "templates", template, "resources", file, package = "cgmindmodelos"
+      "quarto", "templates", template, "resources", file, package = "ipedfmodelos"
     )
   }
   if (res == "") stop(
@@ -34,13 +34,13 @@ copy_font_files <- function(template, font, type = "rmarkdown", current_dir = ".
       to = file.path(current_dir, output), overwrite = TRUE
     )
   }
-  if (font == "Helvetica") {
+  if (font == "Lato") {
     file_copy(template, font, "HelNeueLight8.ttf", "font_regular.ttf", type, current_dir)
     file_copy(template, font, "HelNeueLightItalic9.ttf", "font_italic.ttf", type, current_dir)
     file_copy(template, font, "HelNeueBold2.ttf", "font_bold.ttf", type, current_dir)
     file_copy(template, font, "HelNeueBoldItalic4.ttf", "font_bolditalic.ttf", type, current_dir)
   }
-  if (font == "TheSansUHH") {
+  if (font == "Georgia") {
     file_copy(template, font, "ftsr8a.ttf", "font_regular.ttf", type, current_dir)
     file_copy(template, font, "ftsri8a.ttf", "font_italic.ttf", type, current_dir)
     file_copy(template, font, "ftsb8a.ttf", "font_bold.ttf", type, current_dir)

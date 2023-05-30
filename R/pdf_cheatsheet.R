@@ -6,8 +6,8 @@
 #' @param highlight character; syntax highlighting style. Supported styles
 #'   include "default", "tango", "pygments", "kate" (default here),
 #'   "monochrome", "espresso", "zenburn", and "haddock".
-#' @param font character; default font is "Helvetica"; for members of the UHH there is also the font
-#'        "TheSansUHH" available. If you want to use another font, simply use the setting "other" and
+#' @param font character; default font is "Georgia"; for members of the IPE-DF there is also the font
+#'        "Georgia" available. If you want to use another font, simply use the setting "other" and
 #'        replace the .ttf files for regular, italic, bold, and bold-italic font with your own files
 #'        (should be named EXACTLY as the template font files).
 #' @param latex_engine character; LaTeX engine for producing PDF output. Options
@@ -57,14 +57,14 @@
 #'  }
 #' @return R Markdown output format to pass to \code{\link[rmarkdown]{render}}
 #' @export
-pdf_cheatsheet <- function(highlight = "kate", font = "Helvetica",
+pdf_cheatsheet <- function(highlight = "kate", font = "Georgia",
   latex_engine = "xelatex", ...) {
 
   # Font setting
-  if (!font %in% c("Helvetica", "TheSansUHH", "other")) {
-    stop('Set the font option to "Helvetica", "TheSansUHH" or "other".')
+  if (!font %in% c("Georgia", "Lato", "other")) {
+    stop('Set the font option to "Georgia", "Lato" or "other".')
   }
-  if (font %in% c("Helvetica", "TheSansUHH")) {
+  if (font %in% c("Georgia", "Lato")) {
     copy_font_files("pdf_cheatsheet", font)
   }
 

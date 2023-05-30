@@ -8,7 +8,7 @@ bibliography: [bib/references.bib, bib/packages.bib] # Path to bibliography file
 csl: bib/sage-harvard.csl                            # Path to reference style file
 ### Settings for rendering the document:
 output:
-  UHHformats::html_simple:
+  ipedfmodelos::html_simple:
     highlight: kate
     code_folding: show
     number_sections: false

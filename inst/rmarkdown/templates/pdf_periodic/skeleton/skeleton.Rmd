@@ -12,7 +12,7 @@ bibliography: bib/references.bib, bib/packages.bib
 bibliographystyle: bib/bibstyle.bst
 abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut elit odio. Donec fermentum tellus neque, vitae fringilla orci pretium vitae. Fusce maximus finibus facilisis. Donec ut ullamcorper turpis. Donec ut porta ipsum. Nullam cursus mauris a sapien ornare pulvinar. Aenean malesuada molestie erat quis mattis. Praesent scelerisque posuere faucibus. Praesent nunc nulla, ullamcorper ut ullamcorper sed, molestie ut est. Donec consequat libero nisi, non semper velit vulputate et. Quisque eleifend tincidunt ligula, bibendum finibus massa cursus eget. Curabitur aliquet vehicula quam non pulvinar. Aliquam facilisis tortor nec purus finibus, sit amet elementum eros sodales. Ut porta porttitor vestibulum."
 output: 
-  cgmindmodelos::pdf_periodic:
+  ipedfmodelos::pdf_periodic:
     font: "Lato" # alternative: "Georgia"  
 ---
 
@@ -60,7 +60,7 @@ Configure o cabeçalho YAML incluindo os seguintes elementos:
 * `bibliografia`: Um caminho para o(s) arquivo(s) bibliográfico(s) a ser(em) usado(s) para referências (arquivo BibTeX *.bib*). Este modelo usa o pacote relacionado à bibliografia [natbib](https://ctan.org/pkg/natbib). O arquivo atual 'references.bib' na pasta 'bib/' inclui 3 referências fictícias; insira suas referências neste arquivo ou substitua o arquivo pelo seu.
 * `bibliographystyle`: O estilo é fornecido no arquivo bibstyle.bst, que adota o estilo de referência [SAGE Harvard](https://uk.sagepub.com/sites/default/files/sage_harvard_reference_style_0.pdf). Basta deixar o arquivo como está.
 * `abstract`: Escreva aqui seu resumo ou remova a opção caso não queira incluir um resumo.
-* `output`: Os campos aninhados para o campo de saída são baseados nos argumentos da função de saída. Já que `cgmindmodelos::pdf_periodic` é baseado em `rmarkdown::pdf_document`, veja sua página de ajuda para mais opções. As configurações padrão atuais são
+* `output`: Os campos aninhados para o campo de saída são baseados nos argumentos da função de saída. Já que `ipedfmodelos::pdf_periodic` é baseado em `rmarkdown::pdf_document`, veja sua página de ajuda para mais opções. As configurações padrão atuais são
      * `number_sections: TRUE`
      * `highlit: "kate"`
      * `font = "Lato"`

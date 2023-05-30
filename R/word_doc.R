@@ -2,7 +2,7 @@
 #'
 #' This function serves as wrapper for \code{\link[bookdown]{word_document2}}, with a
 #' custom Pandoc Word template and different knitr default values (e.g., \code{number_sections = FALSE}).
-#' The Word template is based on the standard template of the CGMIND.
+#' The Word template is based on the standard template of the IPE-DF.
 #'
 #' @param toc logical; \code{TRUE} to include a table of contents in the output.
 #' @param toc_depth integer; Depth of headers to include in table of contents. Default set to 4.
@@ -15,11 +15,11 @@
 #'        "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", and "haddock".
 #'        Pass \code{NULL} to prevent syntax highlighting.
 #' @param reference_docx character; use the specified file as a style reference in producing a docx file.
-#'        The 'cgmind-template.docx' template implements most of the standard requirement at the UHH biology
+#'        The 'ipedf-template.docx' template implements most of the standard requirement at the UHH biology
 #'        department. If you prefer another template, pass the file name to this argument or simply use
 #'        'default' to use your standard Word template.
-#' @param font character; default font in the template file is "Georgia"; for members of the UHH there is also
-#'        the font "TheSansUHH" available. If you want to provide your own Word template, there is no
+#' @param font character; default font in the template file is "Georgia"; there is also
+#'        the font "Georgia" available. If you want to provide your own Word template, there is no
 #'        need to set any font here.
 #' @param language character; the document language. If set to "de" (ISO code for German), a configuration file
 #'        named '_bookdown.yml' will be copied (unless this file exists already) to the directory of the R
@@ -43,15 +43,15 @@
 #'  output: UHHthesis::word_doc
 #' }
 word_doc <- function(toc = FALSE, toc_depth = 4, number_sections = FALSE,
-  highlight = "default", reference_docx = "cgmind-template", font = "Lato",
+  highlight = "default", reference_docx = "ipedf-template", font = "Lato",
   language = "en", dpi = 144, pandoc_args = NULL, ...) {
 
   # Font setting
   if (!font %in% c("Lato", "Georgia", "other")) {
     stop('Set the font option to "Georgia", "Lato" or "other".')
   }
-  if (font == "Georgia") filename = "cgmind-template-georgia.docx"
-  if (font == "Lato") filename = "cgmind-template-lato.docx"
+  if (font == "Georgia") filename = "ipedf-template-georgia.docx"
+  if (font == "Lato") filename = "ipedf-template-lato.docx"
 
   # Language setting
   if (!language %in% c("pt","en", "de")) {
@@ -66,7 +66,7 @@ word_doc <- function(toc = FALSE, toc_depth = 4, number_sections = FALSE,
     }
   }
 
-  if (reference_docx == "cgmind-template") {
+  if (reference_docx == "ipedf-template") {
     base <- rmd_word_document_format(
       format         = "word_doc",
       filename       = filename,

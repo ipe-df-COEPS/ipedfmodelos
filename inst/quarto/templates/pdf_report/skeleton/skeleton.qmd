@@ -2,21 +2,21 @@
 title: "Document title"
 subtitle: "Subtitle of document"
 author:
-  - name: Jane Doe
+  - name: João Borges
     affiliations:
-      - name: University of Hamburg
-        department: Biology Department
+      - name: IPE-DF
+        department: COEPS
       - name: Institute of Something
-        address: Hamburg, Germany
-    email: jane.doe@uni-hamburg.de
-  - name: John Doe
+        address: Brasilia, DF
+    email: joao.borges@df.gov.br
+  - name: Name
     affiliations:
-      - name: University of Hamburg
-        department: Biology Department
+      - name: Federal District Government
+        department: Departament
 date: "`r Sys.Date()`"
 ### Comment or remove the following line if NO summary should be shown on the title page
 abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut elit odio. Donec fermentum tellus neque, vitae fringilla orci pretium vitae. Fusce maximus finibus facilisis. Donec ut ullamcorper turpis. Donec ut porta ipsum. Nullam cursus mauris a sapien ornare pulvinar. Aenean malesuada molestie erat quis mattis. Praesent scelerisque posuere faucibus."
-logo1: images/uhh_logo.png  # logo on left side of title page
+logo1: images/ipedf_logo.png  # logo on left side of title page
 logo2: images/min_logo.png  # logo on right side of title page
 ### Uncomment the following line if the document language is German
 # language: custom_lang.yml
@@ -111,7 +111,7 @@ Configure the YAML header including the following elements:
 - `execute`: Global options for customizing output from executed code are specified within this execute key.
 - `fig-align`: Global settings for figure positioning. For other settings see the [PDF format reference](https://quarto.org/docs/reference/formats/pdf.html).
 
-The default font for this template is 'Helvetica' but can be replaced with the University's own font style 'TheSansUHH'. If you are associated with the UHH you are allowed to use this font. You can choose the font in the template when running the function, e.g., `UHHformats::create_quarto_doc(dirname = "your_pdf_report, template = "pdf_report", font = "TheSansUHH")`.
+The default font for this template is 'Lato' but can be replaced with 'Georgia' font. You can choose the font in the template when running the function, e.g., `ipedfmodelos::create_quarto_doc(dirname = "your_pdf_report, template = "pdf_report", font = "Georgia")`.
 
 
 ## Code blocks

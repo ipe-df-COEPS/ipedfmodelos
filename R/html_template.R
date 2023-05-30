@@ -67,7 +67,7 @@ html_template <- function(template_name, template_path,
 
     ## Call rmarkdown::html_document
     html_document_args <- list(
-        template = system.file(template_path, package = "cgmindmodelos"),
+        template = system.file(template_path, package = "ipedfmodelos"),
         extra_dependencies = extra_dependencies,
         pandoc_args = pandoc_args
     )

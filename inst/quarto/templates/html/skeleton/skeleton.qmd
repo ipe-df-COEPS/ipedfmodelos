@@ -6,13 +6,13 @@ description: |
 date: "01/04/2022"
 author:
   - name: Author name 
-    url: https://www.biologie.uni-hamburg.de/en.html
-    affiliation: Universität Hamburg
-    affiliation-url: https://www.uni-hamburg.de/en.html
+    url: https://www.ipe.df.gov.br
+    affiliation: IPE-DF
+    affiliation-url: https://www.ipe.df.gov.br
 citation:
   url: https://example.com/summarizing-output
 license: "CC BY-SA" 
-### Uncomment the following line if the document language is German
+### Uncomment the following line if the document language is English
 # language: custom_lang.yml
 ### Comment or remove the following two lines if NO references are used
 bibliography: [bib/references.bib, bib/packages.bib] # Path to bibliography files 
@@ -27,7 +27,7 @@ format:
     toc: true
     toc-depth: 3
     toc-location: left
-    toc-title: Contents   # remove line or adjust if language is German
+    toc-title: Contents   # remove line or adjust if language is English
     number-sections: true
     number-depth: 3
     anchor-sections: true
@@ -36,7 +36,7 @@ format:
     footnotes-hover: true
     crossref: 
       chapters: false     # set to 'true' if figure numbering should follow subsections
-      fig-prefix: Fig.    # (default is 'Figure'; adjust if language is German)
+      fig-prefix: Fig.    # (default is 'Figure'; adjust if language is English)
     # Code options:
     highlight-style: arrow # default
     code-block-bg: true

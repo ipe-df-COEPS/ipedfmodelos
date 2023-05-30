@@ -12,7 +12,7 @@ bibliographystyle: bib/bibstyle.bst
 params:
   # replace path to images or remove lines (one has to be kept in!)
   cover: images/cover.png
-  title_logo_left: images/cgmind_logo.png
+  title_logo_left: images/ipedf_logo.png
   title_logo_right: images/min_logo.png
   logo_small: images/logo_icon.png
 header-includes: 
@@ -22,7 +22,7 @@ header-includes:
   - \newcommand{\titlelogoright}{`r gsub("_", "\\_", params$title_logo_right)`}
   - \newcommand{\logosmall}{`r gsub("_", "\\_", params$logo_small)`}
 output: 
-  cgmindmodelos::pdf_report:
+  ipedfmodelos::pdf_report:
     font: "Lato" # alternative: "Georgia"  
 ---
 
@@ -71,7 +71,7 @@ Configure o cabeçalho YAML incluindo os seguintes elementos:
 * `bibliographystyle`: O estilo é fornecido no arquivo bibstyle.bst, que adota o estilo de referência [SAGE Harvard](https://uk.sagepub.com/sites/default/files/sage_harvard_reference_style_0.pdf). Basta deixar o arquivo como está.
 * `params`: Os diretórios de imagem de capa e logotipo para a primeira página são especificados aqui.
 * `header_includes`: Here you can add additional \LaTeX code to include in the header, before the `\\begin\{document\}` statement. 
-* `output`: Os campos aninhados para o campo de saída são baseados nos argumentos da função de saída. Já que `cgmindmodelos::pdf_periodic` é baseado em `rmarkdown::pdf_document`, veja sua página de ajuda para mais opções. As configurações padrão atuais são
+* `output`: Os campos aninhados para o campo de saída são baseados nos argumentos da função de saída. Já que `ipedfmodelos::pdf_periodic` é baseado em `rmarkdown::pdf_document`, veja sua página de ajuda para mais opções. As configurações padrão atuais são
      * `number_sections: TRUE`
      * `highlit: "kate"`
      * `font = "Lato"`
