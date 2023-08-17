@@ -19,7 +19,7 @@ html_simple(
   fig_caption = TRUE,
   use_bookdown = TRUE,
   md_extensions = NULL,
-  mathjax = "cgmindmodelos",
+  mathjax = "ipedfmodelos",
   pandoc_args = NULL,
   ...
 )
