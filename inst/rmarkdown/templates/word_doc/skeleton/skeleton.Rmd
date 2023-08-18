@@ -12,7 +12,7 @@ csl: bib/ibict-abnt.csl                            # Path to reference style fil
 
 ### Settings for rendering the document:
 output: 
-  cgmindmodelos::word_doc:
+  ipedfmodelos::word_doc:
     toc: false
     language: "pt"  # alternative: "en" for English
     font: "Lato" # alternative: "Georgia" 
